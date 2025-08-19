@@ -1,0 +1,2444 @@
+<?xml version="1.0" encoding="latin1"?>
+<studyTableDocument>
+	<data>
+		<models>
+			<model>
+				<BasicInformation type="descriptor" GUID="{B10AE105-AB3A-4524-8610-5EDCC504ABEB}">
+					<Name>Atomistic Descriptors</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2003-09-25T17:06:27</DateCreated>
+					<DateModified>2003-09-25T17:06:27</DateModified>
+					<Note>A model to obtain atomic descriptor information</Note>
+				</BasicInformation>
+				<Inputs number="2">
+					<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+						<Key>
+							<KeyName>Structure</KeyName>
+						</Key>
+					</Input>
+					<Input name="Element name" type="element" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>Element name</KeyName>
+						</Key>
+						<Value>C</Value>
+					</Input>
+				</Inputs>
+				<Outputs number="5">
+					<Output name="Total charge" type="charge">
+						<Key>
+							<KeyName>Charge</KeyName>
+						</Key>
+					</Output>
+					<Output name="Total formal charge" type="charge">
+						<Key>
+							<KeyName>FormalCharge</KeyName>
+						</Key>
+					</Output>
+					<Output name="Total molecular mass" type="double">
+						<Key>
+							<KeyName>Mass</KeyName>
+						</Key>
+					</Output>
+					<Output name="Atom count" type="count">
+						<Key>
+							<KeyName>Atom count</KeyName>
+						</Key>
+					</Output>
+					<Output name="Element count" type="count">
+						<Key>
+							<KeyName>Element count</KeyName>
+						</Key>
+					</Output>
+					<OutputGroups number="5">
+						<OutputGroup name="Total charge" category="Charges">
+							<OutputKey>Charge</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Total formal charge" category="Charges">
+							<OutputKey>FormalCharge</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Total molecular mass" category="Structural">
+							<OutputKey>Mass</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Atom count" category="Feature counts">
+							<OutputKey>Atom count</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Element count" category="Feature counts">
+							<OutputKey>Element count</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMAtomistic" engineName="Atomistic Descriptors"/>
+				</Relationship>
+			</model>
+			<model>
+				<BasicInformation type="descriptor" GUID="{6E1BA73D-F756-4590-87DE-6E0C725CBE2F}">
+					<Name>Fast Descriptors</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2003-09-25T17:19:52</DateCreated>
+					<DateModified>2003-09-25T17:19:52</DateModified>
+					<Note>Fast Descriptor Models</Note>
+				</BasicInformation>
+				<Inputs number="1">
+					<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+						<Key>
+							<KeyName>Structure</KeyName>
+						</Key>
+						<GUID></GUID>
+					</Input>
+				</Inputs>
+				<Outputs number="37">
+					<Output name="Rotatable bonds" type="count">
+						<Key>
+							<KeyName>Rotlbonds</KeyName>
+						</Key>
+					</Output>
+					<Output name="Hydrogen bond donor" type="count">
+						<Key>
+							<KeyName>Hbond donor</KeyName>
+						</Key>
+					</Output>
+					<Output name="Hydrogen bond acceptor" type="count">
+						<Key>
+							<KeyName>Hbond acceptor</KeyName>
+						</Key>
+					</Output>
+					<Output name="Chiral centers" type="count">
+						<Key>
+							<KeyName>Chiral centers</KeyName>
+						</Key>
+					</Output>
+					<Output name="AlogP" type="double">
+						<Key>
+							<KeyName>AlogP</KeyName>
+						</Key>
+					</Output>
+					<Output name="AlogP98" type="double">
+						<Key>
+							<KeyName>AlogP98</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular refractivity" type="double">
+						<Key>
+							<KeyName>MolRef</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular flexibility" type="double">
+						<Key>
+							<KeyName>PHI</KeyName>
+						</Key>
+					</Output>
+					<Output name="Balaban index JX" type="double">
+						<Key>
+							<KeyName>JX</KeyName>
+						</Key>
+					</Output>
+					<Output name="Balaban index JY" type="double">
+						<Key>
+							<KeyName>JY</KeyName>
+						</Key>
+					</Output>
+					<Output name="Wiener index" type="long">
+						<Key>
+							<KeyName>Wiener</KeyName>
+						</Key>
+					</Output>
+					<Output name="Zagreb index" type="long">
+						<Key>
+							<KeyName>Zagreb</KeyName>
+						</Key>
+					</Output>
+					<OutputArray name="Kappa indices" type="double">
+						<Key>
+							<KeyName>KAPPA</KeyName>
+						</Key>
+						<OutputItems number="3">
+							<OutputItem>Kappa-1</OutputItem>
+							<OutputItem>Kappa-2</OutputItem>
+							<OutputItem>Kappa-3</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="Kappa indices (alpha modified)" type="double">
+						<Key>
+							<KeyName>KAPPA-AM</KeyName>
+						</Key>
+						<OutputItems number="3">
+							<OutputItem>Kappa-1 (alpha modified)</OutputItem>
+							<OutputItem>Kappa-2 (alpha modified)</OutputItem>
+							<OutputItem>Kappa-3 (alpha modified)</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="Subgraph counts (0-3)" type="count" unit="unknown">
+						<Key>
+							<KeyName>SC03</KeyName>
+						</Key>
+						<OutputItems number="6">
+							<OutputItem>Subgraph counts (0): path</OutputItem>
+							<OutputItem>Subgraph counts (1): path</OutputItem>
+							<OutputItem>Subgraph counts (2): path</OutputItem>
+							<OutputItem>Subgraph counts (3): path</OutputItem>
+							<OutputItem>Subgraph counts (3): cluster</OutputItem>
+							<OutputItem>Subgraph counts (3): chain</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="Subgraph counts (4-6)" type="count" unit="unknown">
+						<Key>
+							<KeyName>SC46</KeyName>
+						</Key>
+						<OutputItems number="12">
+							<OutputItem>Subgraph counts (4): path</OutputItem>
+							<OutputItem>Subgraph counts (4): cluster</OutputItem>
+							<OutputItem>Subgraph counts (4): path/cluster</OutputItem>
+							<OutputItem>Subgraph counts (4): chain</OutputItem>
+							<OutputItem>Subgraph counts (5): path</OutputItem>
+							<OutputItem>Subgraph counts (5): cluster</OutputItem>
+							<OutputItem>Subgraph counts (5): path/cluster</OutputItem>
+							<OutputItem>Subgraph counts (5): chain</OutputItem>
+							<OutputItem>Subgraph counts (6): path</OutputItem>
+							<OutputItem>Subgraph counts (6): cluster</OutputItem>
+							<OutputItem>Subgraph counts (6): path/cluster</OutputItem>
+							<OutputItem>Subgraph counts (6): chain</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="Chi indices (0-3)" type="double">
+						<Key>
+							<KeyName>CHI03</KeyName>
+						</Key>
+						<OutputItems number="6">
+							<OutputItem>Chi (0)</OutputItem>
+							<OutputItem>Chi (1)</OutputItem>
+							<OutputItem>Chi (2)</OutputItem>
+							<OutputItem>Chi (3): path</OutputItem>
+							<OutputItem>Chi (3): cluster</OutputItem>
+							<OutputItem>Chi (3): chain</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="Chi indices (4-6)" type="double">
+						<Key>
+							<KeyName>CHI46</KeyName>
+						</Key>
+						<OutputItems number="12">
+							<OutputItem>Chi (4): path</OutputItem>
+							<OutputItem>Chi (4): cluster</OutputItem>
+							<OutputItem>Chi (4): path/cluster</OutputItem>
+							<OutputItem>Chi (4): chain</OutputItem>
+							<OutputItem>Chi (5): path</OutputItem>
+							<OutputItem>Chi (5): cluster</OutputItem>
+							<OutputItem>Chi (5): path/cluster</OutputItem>
+							<OutputItem>Chi (5): chain</OutputItem>
+							<OutputItem>Chi (6): path</OutputItem>
+							<OutputItem>Chi (6): cluster</OutputItem>
+							<OutputItem>Chi (6): path/cluster</OutputItem>
+							<OutputItem>Chi (6): chain</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="Chi indices (0-3) (valence modified)" type="double">
+						<Key>
+							<KeyName>CHIV03</KeyName>
+						</Key>
+						<OutputItems number="6">
+							<OutputItem>Chi (0) (valence modified)</OutputItem>
+							<OutputItem>Chi (1) (valence modified)</OutputItem>
+							<OutputItem>Chi (2) (valence modified)</OutputItem>
+							<OutputItem>Chi (3): path (valence modified)</OutputItem>
+							<OutputItem>Chi (3): cluster (valence modified)</OutputItem>
+							<OutputItem>Chi (3): chain (valence modified)</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="Chi indices (4-6) (valence modified)" type="double">
+						<Key>
+							<KeyName>CHIV46</KeyName>
+						</Key>
+						<OutputItems number="12">
+							<OutputItem>Chi (4): path (valence modified)</OutputItem>
+							<OutputItem>Chi (4): cluster (valence modified)</OutputItem>
+							<OutputItem>Chi (4): path/cluster (valence modified)</OutputItem>
+							<OutputItem>Chi (4): chain (valence modified)</OutputItem>
+							<OutputItem>Chi (5): path (valence modified)</OutputItem>
+							<OutputItem>Chi (5): cluster (valence modified)</OutputItem>
+							<OutputItem>Chi (5): path/cluster (valence modified)</OutputItem>
+							<OutputItem>Chi (5): chain (valence modified)</OutputItem>
+							<OutputItem>Chi (6): path (valence modified)</OutputItem>
+							<OutputItem>Chi (6): cluster (valence modified)</OutputItem>
+							<OutputItem>Chi (6): path/cluster (valence modified)</OutputItem>
+							<OutputItem>Chi (6): chain (valence modified)</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<Output name="Information content (IC)" type="double">
+						<Key>
+							<KeyName>IC</KeyName>
+						</Key>
+					</Output>
+					<Output name="Bond information content (BIC)" type="double">
+						<Key>
+							<KeyName>BIC</KeyName>
+						</Key>
+					</Output>
+					<Output name="Complementary information content (CIC)" type="double">
+						<Key>
+							<KeyName>CIC</KeyName>
+						</Key>
+					</Output>
+					<Output name="Structural information content (SIC)" type="double">
+						<Key>
+							<KeyName>SIC</KeyName>
+						</Key>
+					</Output>
+					<Output name="Edge adjacency/equality" type="double">
+						<Key>
+							<KeyName>E-ADJ-equ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Edge adjacency/magnitude" type="double">
+						<Key>
+							<KeyName>E-ADJ-mag</KeyName>
+						</Key>
+					</Output>
+					<Output name="Edge distance/equality" type="double">
+						<Key>
+							<KeyName>E-DIST-equ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Edge distance/magnitude" type="double">
+						<Key>
+							<KeyName>E-DIST-mag</KeyName>
+						</Key>
+					</Output>
+					<Output name="Vertex adjacency/equality" type="double">
+						<Key>
+							<KeyName>V-ADJ-equ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Vertex adjacency/magnitude" type="double">
+						<Key>
+							<KeyName>V-ADJ-mag</KeyName>
+						</Key>
+					</Output>
+					<Output name="Vertex distance/equality" type="double">
+						<Key>
+							<KeyName>V-DIST-equ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Vertex distance/magnitude" type="double">
+						<Key>
+							<KeyName>V-DIST-mag</KeyName>
+						</Key>
+					</Output>
+					<Output name="Atomic composition (total)" type="double">
+						<Key>
+							<KeyName>IAC-Total</KeyName>
+						</Key>
+					</Output>
+					<Output name="Atomic composition (mean)" type="double">
+						<Key>
+							<KeyName>IAC-Mean</KeyName>
+						</Key>
+					</Output>
+					<OutputArray name="E-state keys (sums)" type="double">
+						<Key>
+							<KeyName>ESUMS</KeyName>
+						</Key>
+						<OutputItems number="79">
+							<OutputItem>E-state keys (sums): S_sCH3</OutputItem>
+							<OutputItem>E-state keys (sums): S_dCH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssCH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_tCH</OutputItem>
+							<OutputItem>E-state keys (sums): S_dsCH</OutputItem>
+							<OutputItem>E-state keys (sums): S_aaCH</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssCH</OutputItem>
+							<OutputItem>E-state keys (sums): S_ddC</OutputItem>
+							<OutputItem>E-state keys (sums): S_tsC </OutputItem>
+							<OutputItem>E-state keys (sums): S_dssC</OutputItem>
+							<OutputItem>E-state keys (sums): S_aasC</OutputItem>
+							<OutputItem>E-state keys (sums): S_aaaC</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssC</OutputItem>
+							<OutputItem>E-state keys (sums): S_sNH3</OutputItem>
+							<OutputItem>E-state keys (sums): S_sNH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssNH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_dNH </OutputItem>
+							<OutputItem>E-state keys (sums): S_ssNH</OutputItem>
+							<OutputItem>E-state keys (sums): S_aaNH</OutputItem>
+							<OutputItem>E-state keys (sums): S_tN</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssNH</OutputItem>
+							<OutputItem>E-state keys (sums): S_dsN</OutputItem>
+							<OutputItem>E-state keys (sums): S_aaN</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssN</OutputItem>
+							<OutputItem>E-state keys (sums): S_ddsN</OutputItem>
+							<OutputItem>E-state keys (sums): S_aasN</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssN</OutputItem>
+							<OutputItem>E-state keys (sums): S_sOH</OutputItem>
+							<OutputItem>E-state keys (sums): S_dO</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssO</OutputItem>
+							<OutputItem>E-state keys (sums): S_aaO</OutputItem>
+							<OutputItem>E-state keys (sums): S_sSH</OutputItem>
+							<OutputItem>E-state keys (sums): S_dS</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssS</OutputItem>
+							<OutputItem>E-state keys (sums): S_aaS</OutputItem>
+							<OutputItem>E-state keys (sums): S_dssS</OutputItem>
+							<OutputItem>E-state keys (sums): S_ddssS</OutputItem>
+							<OutputItem>E-state keys (sums): S_sPH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssPH</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssP</OutputItem>
+							<OutputItem>E-state keys (sums): S_dsssP</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssssP</OutputItem>
+							<OutputItem>E-state keys (sums): S_sF</OutputItem>
+							<OutputItem>E-state keys (sums): S_sCl</OutputItem>
+							<OutputItem>E-state keys (sums): S_sBr</OutputItem>
+							<OutputItem>E-state keys (sums): S_sI</OutputItem>
+							<OutputItem>E-state keys (sums): S_sLi</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssBe</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssBe</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssBH</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssB</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssB</OutputItem>
+							<OutputItem>E-state keys (sums): S_sSiH3</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssSiH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssSiH</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssSi</OutputItem>
+							<OutputItem>E-state keys (sums): S_sGeH3</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssGeH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssGeH</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssGe</OutputItem>
+							<OutputItem>E-state keys (sums): S_sAsH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssAsH</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssAs</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssdAs</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssssAs</OutputItem>
+							<OutputItem>E-state keys (sums): S_sSeH</OutputItem>
+							<OutputItem>E-state keys (sums): S_dSe</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssSe</OutputItem>
+							<OutputItem>E-state keys (sums): S_aaSe</OutputItem>
+							<OutputItem>E-state keys (sums): S_dssSe</OutputItem>
+							<OutputItem>E-state keys (sums): S_ddssSe</OutputItem>
+							<OutputItem>E-state keys (sums): S_sSnH3</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssSnH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssSnH</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssSn</OutputItem>
+							<OutputItem>E-state keys (sums): S_sPbH3</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssPbH2</OutputItem>
+							<OutputItem>E-state keys (sums): S_sssPbH</OutputItem>
+							<OutputItem>E-state keys (sums): S_ssssPb</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="E-state keys (counts)" type="count">
+						<Key>
+							<KeyName>ECOUNT</KeyName>
+						</Key>
+						<OutputItems number="79">
+							<OutputItem>E-state keys (counts): N_sCH3 </OutputItem>
+							<OutputItem>E-state keys (counts): N_dCH2 </OutputItem>
+							<OutputItem>E-state keys (counts): N_ssCH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_tCH</OutputItem>
+							<OutputItem>E-state keys (counts): N_dsCH</OutputItem>
+							<OutputItem>E-state keys (counts): N_aaCH</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssCH</OutputItem>
+							<OutputItem>E-state keys (counts): N_ddC</OutputItem>
+							<OutputItem>E-state keys (counts): N_tsC </OutputItem>
+							<OutputItem>E-state keys (counts): N_dssC</OutputItem>
+							<OutputItem>E-state keys (counts): N_aasC</OutputItem>
+							<OutputItem>E-state keys (counts): N_aaaC</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssC</OutputItem>
+							<OutputItem>E-state keys (counts): N_sNH3</OutputItem>
+							<OutputItem>E-state keys (counts): N_sNH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssNH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_dNH </OutputItem>
+							<OutputItem>E-state keys (counts): N_ssNH</OutputItem>
+							<OutputItem>E-state keys (counts): N_aaNH</OutputItem>
+							<OutputItem>E-state keys (counts): N_tN</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssNH</OutputItem>
+							<OutputItem>E-state keys (counts): N_dsN</OutputItem>
+							<OutputItem>E-state keys (counts): N_aaN</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssN</OutputItem>
+							<OutputItem>E-state keys (counts): N_ddsN</OutputItem>
+							<OutputItem>E-state keys (counts): N_aasN</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssN</OutputItem>
+							<OutputItem>E-state keys (counts): N_sOH</OutputItem>
+							<OutputItem>E-state keys (counts): N_dO</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssO</OutputItem>
+							<OutputItem>E-state keys (counts): N_aaO</OutputItem>
+							<OutputItem>E-state keys (counts): N_sSH</OutputItem>
+							<OutputItem>E-state keys (counts): N_dS</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssS</OutputItem>
+							<OutputItem>E-state keys (counts): N_aaS</OutputItem>
+							<OutputItem>E-state keys (counts): N_dssS</OutputItem>
+							<OutputItem>E-state keys (counts): N_ddssS</OutputItem>
+							<OutputItem>E-state keys (counts): N_sPH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssPH</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssP</OutputItem>
+							<OutputItem>E-state keys (counts): N_dsssP</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssssP</OutputItem>
+							<OutputItem>E-state keys (counts): N_sF</OutputItem>
+							<OutputItem>E-state keys (counts): N_sCl</OutputItem>
+							<OutputItem>E-state keys (counts): N_sBr</OutputItem>
+							<OutputItem>E-state keys (counts): N_sI</OutputItem>
+							<OutputItem>E-state keys (counts): N_sLi</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssBe</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssBe</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssBH</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssB</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssB</OutputItem>
+							<OutputItem>E-state keys (counts): N_sSiH3</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssSiH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssSiH</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssSi</OutputItem>
+							<OutputItem>E-state keys (counts): N_sGeH3</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssGeH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssGeH</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssGe</OutputItem>
+							<OutputItem>E-state keys (counts): N_sAsH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssAsH</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssAs</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssdAs</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssssAs</OutputItem>
+							<OutputItem>E-state keys (counts): N_sSeH</OutputItem>
+							<OutputItem>E-state keys (counts): N_dSe</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssSe</OutputItem>
+							<OutputItem>E-state keys (counts): N_aaSe</OutputItem>
+							<OutputItem>E-state keys (counts): N_dssSe</OutputItem>
+							<OutputItem>E-state keys (counts): N_ddssSe</OutputItem>
+							<OutputItem>E-state keys (counts): N_sSnH3</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssSnH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssSnH</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssSn</OutputItem>
+							<OutputItem>E-state keys (counts): N_sPbH3</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssPbH2</OutputItem>
+							<OutputItem>E-state keys (counts): N_sssPbH</OutputItem>
+							<OutputItem>E-state keys (counts): N_ssssPb</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputArray name="E-state keys (indicators)" type="long">
+						<Key>
+							<KeyName>EIND</KeyName>
+						</Key>
+						<OutputItems number="79">
+							<OutputItem>E-state keys (indicators): I_sCH3 </OutputItem>
+							<OutputItem>E-state keys (indicators): I_dCH2 </OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssCH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_tCH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dsCH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aaCH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssCH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ddC</OutputItem>
+							<OutputItem>E-state keys (indicators): I_tsC </OutputItem>
+							<OutputItem>E-state keys (indicators): I_dssC</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aasC</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aaaC</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssC</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sNH3</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sNH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssNH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dNH </OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssNH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aaNH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_tN</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssNH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dsN</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aaN</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssN</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ddsN</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aasN</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssN</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sOH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dO</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssO</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aaO</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sSH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dS</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssS</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aaS</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dssS</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ddssS</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sPH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssPH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssP</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dsssP</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssssP</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sF</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sCl</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sBr</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sI</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sLi</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssBe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssBe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssBH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssB</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssB</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sSiH3</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssSiH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssSiH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssSi</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sGeH3</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssGeH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssGeH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssGe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sAsH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssAsH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssAs</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssdAs</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssssAs</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sSeH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dSe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssSe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_aaSe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_dssSe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ddssSe</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sSnH3</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssSnH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssSnH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssSn</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sPbH3</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssPbH2</OutputItem>
+							<OutputItem>E-state keys (indicators): I_sssPbH</OutputItem>
+							<OutputItem>E-state keys (indicators): I_ssssPb</OutputItem>
+						</OutputItems>
+					</OutputArray>
+					<OutputGroups number="17">
+						<OutputGroup name="Rotatable bonds" category="Structural">
+							<OutputKey>Rotlbonds</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Hydrogen bond donor" category="Structural">
+							<OutputKey>Hbond donor</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Hydrogen bond acceptor" category="Structural">
+							<OutputKey>Hbond acceptor</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Chiral centers" category="Structural">
+							<OutputKey>Chiral centers</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="AlogP" category="Thermodynamic">
+							<OutputKey>AlogP</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="AlogP98" category="Thermodynamic">
+							<OutputKey>AlogP98</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Molecular refractivity" category="Thermodynamic">
+							<OutputKey>MolRef</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Molecular flexibility" category="Topological">
+							<OutputKey>PHI</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Balaban indices" category="Topological">
+							<OutputKey>JX</OutputKey>
+							<OutputKey>JY</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Wiener index" category="Topological">
+							<OutputKey>Wiener</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Zagreb index" category="Topological">
+							<OutputKey>Zagreb</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Kappa indices" category="Topological">
+							<OutputKey>KAPPA</OutputKey>
+							<OutputKey>KAPPA-AM</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Subgraph counts" category="Topological">
+							<OutputKey>SC03</OutputKey>
+							<OutputKey defaultCalc="0">SC46</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Chi indices" category="Topological">
+							<OutputKey>CHI03</OutputKey>
+							<OutputKey defaultCalc="0">CHI46</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Valence modified chi indices" category="Topological">
+							<OutputKey>CHIV03</OutputKey>
+							<OutputKey defaultCalc="0">CHIV46</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Information content" category="Information">
+							<OutputKey>IC</OutputKey>
+							<OutputKey>BIC</OutputKey>
+							<OutputKey>CIC</OutputKey>
+							<OutputKey>SIC</OutputKey>
+							<OutputKey defaultCalc="0">E-ADJ-equ</OutputKey>
+							<OutputKey>E-ADJ-mag</OutputKey>
+							<OutputKey defaultCalc="0">E-DIST-equ</OutputKey>
+							<OutputKey>E-DIST-mag</OutputKey>
+							<OutputKey>V-ADJ-equ</OutputKey>
+							<OutputKey>V-ADJ-mag</OutputKey>
+							<OutputKey>V-DIST-equ</OutputKey>
+							<OutputKey>V-DIST-mag</OutputKey>
+							<OutputKey>IAC-Total</OutputKey>
+							<OutputKey defaultCalc="0">IAC-Mean</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="E-state keys" category="E-state keys">
+							<OutputKey>ESUMS</OutputKey>
+							<OutputKey defaultCalc="0">ECOUNT</OutputKey>
+							<OutputKey defaultCalc="0">EIND</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineFastDescriptor" engineName="Fast Descriptors"/>
+				</Relationship>
+			</model>
+			<model>
+				<BasicInformation type="descriptor" GUID="{ABD7486A-CDF2-463A-BC1A-75D0CC96C083}">
+					<Name>Spatial Descriptors</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2003-09-25T17:06:27</DateCreated>
+					<DateModified>2003-09-25T17:06:27</DateModified>
+					<Note>A model to calculate spatial descriptors</Note>
+				</BasicInformation>
+				<Inputs number="1">
+					<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+						<Key>
+							<KeyName>Structure</KeyName>
+						</Key>
+					</Input>
+				</Inputs>
+				<Outputs number="37">
+					<Output name="Molecular area (vdW area)" type="double">
+						<Key>
+							<KeyName>Area</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular volume (vdW volume)" type="double">
+						<Key>
+							<KeyName>Volume</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular density" type="double">
+						<Key>
+							<KeyName>Density</KeyName>
+						</Key>
+					</Output>
+					<Output name="Radius of gyration" type="double">
+						<Key>
+							<KeyName>RGyr</KeyName>
+						</Key>
+					</Output>
+					<Output name="Principal moment of inertia X" type="double">
+						<Key>
+							<KeyName>PMIXX40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Principal moment of inertia Y" type="double">
+						<Key>
+							<KeyName>PMIYY40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Principal moment of inertia Z" type="double">
+						<Key>
+							<KeyName>PMIZZ40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Principal moments of inertia (magnitude)" type="double">
+						<Key>
+							<KeyName>PMITOT40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Moment of inertia X" type="double">
+						<Key>
+							<KeyName>PMIXX</KeyName>
+						</Key>
+					</Output>
+					<Output name="Moment of inertia Y" type="double">
+						<Key>
+							<KeyName>PMIYY</KeyName>
+						</Key>
+					</Output>
+					<Output name="Moment of inertia Z" type="double">
+						<Key>
+							<KeyName>PMIZZ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Moment of inertia (magnitude)" type="double">
+						<Key>
+							<KeyName>PMITOT</KeyName>
+						</Key>
+					</Output>
+					<Output name="Ellipsoidal volume" type="double">
+						<Key>
+							<KeyName>EllipsoidalVolume</KeyName>
+						</Key>
+					</Output>
+					<Output name="Dipole moment X" type="double">
+						<Key>
+							<KeyName>DIPMOMX</KeyName>
+						</Key>
+					</Output>
+					<Output name="Dipole moment Y" type="double">
+						<Key>
+							<KeyName>DIPMOMY</KeyName>
+						</Key>
+					</Output>
+					<Output name="Dipole moment Z" type="double">
+						<Key>
+							<KeyName>DIPMOMZ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Dipole moment (magnitude)" type="double">
+						<Key>
+							<KeyName>DIPMOMTOT</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow area: XY plane" type="double">
+						<Key>
+							<KeyName>SXY40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow area: YZ plane" type="double">
+						<Key>
+							<KeyName>SYZ40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow area: ZX plane" type="double">
+						<Key>
+							<KeyName>SZX40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow area fraction: XY plane" type="double">
+						<Key>
+							<KeyName>SXYF40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow area fraction: YZ plane" type="double">
+						<Key>
+							<KeyName>SYZF40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow area fraction: ZX plane" type="double">
+						<Key>
+							<KeyName>SZXF40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow length: LX" type="double">
+						<Key>
+							<KeyName>SLX40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow length: LY" type="double">
+						<Key>
+							<KeyName>SLY40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow length: LZ" type="double">
+						<Key>
+							<KeyName>SLZ40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Shadow ratio" type="double">
+						<Key>
+							<KeyName>SRatio40</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow area: XY plane" type="double">
+						<Key>
+							<KeyName>SXY</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow area: YZ plane" type="double">
+						<Key>
+							<KeyName>SYZ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow area: ZX plane" type="double">
+						<Key>
+							<KeyName>SZX</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow area fraction: XY plane" type="double">
+						<Key>
+							<KeyName>SXYF</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow area fraction: YZ plane" type="double">
+						<Key>
+							<KeyName>SYZF</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow area fraction: ZX plane" type="double">
+						<Key>
+							<KeyName>SZXF</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow length: LX" type="double">
+						<Key>
+							<KeyName>SLX</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow length: LY" type="double">
+						<Key>
+							<KeyName>SLY</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow length: LZ" type="double">
+						<Key>
+							<KeyName>SLZ</KeyName>
+						</Key>
+					</Output>
+					<Output name="Molecular shadow ratio" type="double">
+						<Key>
+							<KeyName>SRatio</KeyName>
+						</Key>
+					</Output>
+					<OutputGroups number="8">
+						<OutputGroup name="Molecular area (vdW area)" category="Structural">
+							<OutputKey>Area</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Molecular volume (vdW volume)" category="Structural">
+							<OutputKey>Volume</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Molecular density" category="Structural">
+							<OutputKey>Density</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Moments of inertia" category="Spatial">
+							<OutputKey>PMITOT40</OutputKey>
+							<OutputKey>PMIXX40</OutputKey>
+							<OutputKey>PMIYY40</OutputKey>
+							<OutputKey>PMIZZ40</OutputKey>
+							<OutputKey defaultCalc="0">PMITOT</OutputKey>
+							<OutputKey defaultCalc="0">PMIXX</OutputKey>
+							<OutputKey defaultCalc="0">PMIYY</OutputKey>
+							<OutputKey defaultCalc="0">PMIZZ</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Radius of gyration" category="Spatial">
+							<OutputKey>RGyr</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Ellipsoidal volume" category="Spatial">
+							<OutputKey>EllipsoidalVolume</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Molecular shadow indices" category="Spatial">
+							<OutputKey>SXY40</OutputKey>
+							<OutputKey>SYZ40</OutputKey>
+							<OutputKey>SZX40</OutputKey>
+							<OutputKey>SXYF40</OutputKey>
+							<OutputKey>SYZF40</OutputKey>
+							<OutputKey>SZXF40</OutputKey>
+							<OutputKey>SLX40</OutputKey>
+							<OutputKey>SLY40</OutputKey>
+							<OutputKey>SLZ40</OutputKey>
+							<OutputKey>SRatio40</OutputKey>
+							<OutputKey defaultCalc="0">SXY</OutputKey>
+							<OutputKey defaultCalc="0">SYZ</OutputKey>
+							<OutputKey defaultCalc="0">SZX</OutputKey>
+							<OutputKey defaultCalc="0">SXYF</OutputKey>
+							<OutputKey defaultCalc="0">SYZF</OutputKey>
+							<OutputKey defaultCalc="0">SZXF</OutputKey>
+							<OutputKey defaultCalc="0">SLX</OutputKey>
+							<OutputKey defaultCalc="0">SLY</OutputKey>
+							<OutputKey defaultCalc="0">SLZ</OutputKey>
+							<OutputKey defaultCalc="0">SRatio</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Molecular dipole moment" category="Multipoles">
+							<OutputKey>DIPMOMTOT</OutputKey>
+							<OutputKey>DIPMOMX</OutputKey>
+							<OutputKey>DIPMOMY</OutputKey>
+							<OutputKey>DIPMOMZ</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineSpatial" engineName="Spatial Descriptors"/>
+				</Relationship>
+			</model>
+			<model>
+				<BasicInformation type="descriptor" GUID="{4CC363A0-E0C1-4102-B023-D2889B61EA6C}">
+					<Name>Atomistic Descriptors</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2003-09-25T17:06:27</DateCreated>
+					<DateModified>2003-09-25T17:06:27</DateModified>
+					<Note>A model to obtain atomic descriptor information</Note>
+				</BasicInformation>
+				<Inputs number="2">
+					<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+						<Key>
+							<KeyName>Structure</KeyName>
+						</Key>
+					</Input>
+					<Input name="Element name" type="element" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>Element name</KeyName>
+						</Key>
+						<Value>C</Value>
+					</Input>
+				</Inputs>
+				<Outputs number="5">
+					<Output name="Total charge" type="charge">
+						<Key>
+							<KeyName>Charge</KeyName>
+						</Key>
+					</Output>
+					<Output name="Total formal charge" type="charge">
+						<Key>
+							<KeyName>FormalCharge</KeyName>
+						</Key>
+					</Output>
+					<Output name="Total molecular mass" type="double">
+						<Key>
+							<KeyName>Mass</KeyName>
+						</Key>
+					</Output>
+					<Output name="Atom count" type="count">
+						<Key>
+							<KeyName>Atom count</KeyName>
+						</Key>
+					</Output>
+					<Output name="Element count" type="count">
+						<Key>
+							<KeyName>Element count</KeyName>
+						</Key>
+					</Output>
+					<OutputGroups number="5">
+						<OutputGroup name="Total charge" category="Charges">
+							<OutputKey>Charge</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Total formal charge" category="Charges">
+							<OutputKey>FormalCharge</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Total molecular mass" category="Structural">
+							<OutputKey>Mass</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Atom count" category="Feature counts">
+							<OutputKey>Atom count</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Element count" category="Feature counts">
+							<OutputKey>Element count</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMAtomistic" engineName="Atomistic Descriptors"/>
+				</Relationship>
+			</model>
+			<model>
+				<BasicInformation type="descriptor" GUID="{5A441CDE-0AEC-4518-8E90-0398E6401608}">
+					<Name>Fragment Counts</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2003-09-25T17:06:27</DateCreated>
+					<DateModified>2004-09-29T15:22:00</DateModified>
+					<Note>A model to count occurrences of specified fragments</Note>
+				</BasicInformation>
+				<Inputs number="4">
+					<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+						<Key>
+							<KeyName>Structure</KeyName>
+						</Key>
+					</Input>
+					<Input name="Heavy atoms only" type="boolean" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>IgnoreHydrogen</KeyName>
+						</Key>
+						<Value>0</Value>
+					</Input>
+					<Input name="Convert bonds to resonant" type="boolean" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>ConvertToResonant</KeyName>
+						</Key>
+						<Value>-1</Value>
+					</Input>
+					<Input name="Allow overlaps" type="boolean" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>AllowOverlaps</KeyName>
+						</Key>
+						<Value>-1</Value>
+					</Input>
+				</Inputs>
+				<Outputs number="44">
+					<Output name="Acid anhydride" type="count">
+						<Key>
+							<KeyName>Functional Groups/Acid Anhydride</KeyName>
+						</Key>
+					</Output>
+					<Output name="Acid chloride" type="count">
+						<Key>
+							<KeyName>Functional Groups/Acid Chloride</KeyName>
+						</Key>
+					</Output>
+					<Output name="Amide" type="count">
+						<Key>
+							<KeyName>Functional Groups/Amide</KeyName>
+						</Key>
+					</Output>
+					<Output name="Amine" type="count">
+						<Key>
+							<KeyName>Functional Groups/Amine</KeyName>
+						</Key>
+					</Output>
+					<Output name="Azo" type="count">
+						<Key>
+							<KeyName>Functional Groups/Azo</KeyName>
+						</Key>
+					</Output>
+					<Output name="B-dicarbonyl" type="count">
+						<Key>
+							<KeyName>Functional Groups/B-Dicarbonyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Carboxylate" type="count">
+						<Key>
+							<KeyName>Functional Groups/Carboxylate</KeyName>
+						</Key>
+					</Output>
+					<Output name="Carboxylic Acid" type="count">
+						<Key>
+							<KeyName>Functional Groups/Carboxylic Acid</KeyName>
+						</Key>
+					</Output>
+					<Output name="Diazo+" type="count">
+						<Key>
+							<KeyName>Functional Groups/Diazo+</KeyName>
+						</Key>
+					</Output>
+					<Output name="Glycerol" type="count">
+						<Key>
+							<KeyName>Functional Groups/Glycerol</KeyName>
+						</Key>
+					</Output>
+					<Output name="Glycol" type="count">
+						<Key>
+							<KeyName>Functional Groups/Glycol</KeyName>
+						</Key>
+					</Output>
+					<Output name="Hydrazone" type="count">
+						<Key>
+							<KeyName>Functional Groups/Hydrazone</KeyName>
+						</Key>
+					</Output>
+					<Output name="Hydroxy" type="count">
+						<Key>
+							<KeyName>Functional Groups/Hydroxy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Methanal" type="count">
+						<Key>
+							<KeyName>Functional Groups/Methanal</KeyName>
+						</Key>
+					</Output>
+					<Output name="Methoxy" type="count">
+						<Key>
+							<KeyName>Functional Groups/Methoxy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Nitrile" type="count">
+						<Key>
+							<KeyName>Functional Groups/Nitrile</KeyName>
+						</Key>
+					</Output>
+					<Output name="Nitro" type="count">
+						<Key>
+							<KeyName>Functional Groups/Nitro</KeyName>
+						</Key>
+					</Output>
+					<Output name="Nitroso" type="count">
+						<Key>
+							<KeyName>Functional Groups/Nitroso</KeyName>
+						</Key>
+					</Output>
+					<Output name="Oxime" type="count">
+						<Key>
+							<KeyName>Functional Groups/Oxime</KeyName>
+						</Key>
+					</Output>
+					<Output name="Peroxide" type="count">
+						<Key>
+							<KeyName>Functional Groups/Peroxide</KeyName>
+						</Key>
+					</Output>
+					<Output name="Phenoxy" type="count">
+						<Key>
+							<KeyName>Functional Groups/Phenoxy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Phosphate" type="count">
+						<Key>
+							<KeyName>Functional Groups/Phosphate</KeyName>
+						</Key>
+					</Output>
+					<Output name="Quaternary amine" type="count">
+						<Key>
+							<KeyName>Functional Groups/Quaternary Amine</KeyName>
+						</Key>
+					</Output>
+					<Output name="Sulfonic acid" type="count">
+						<Key>
+							<KeyName>Functional Groups/Sulfonic Acid</KeyName>
+						</Key>
+					</Output>
+					<Output name="Sulfoxy amide" type="count">
+						<Key>
+							<KeyName>Functional Groups/Sulfoxy Amide</KeyName>
+						</Key>
+					</Output>
+					<Output name="Sulfoxy chloride" type="count">
+						<Key>
+							<KeyName>Functional Groups/Sulfoxy Chloride</KeyName>
+						</Key>
+					</Output>
+					<Output name="Sulfoxy ester" type="count">
+						<Key>
+							<KeyName>Functional Groups/Sulfoxy Ester</KeyName>
+						</Key>
+					</Output>
+					<Output name="Thiol" type="count">
+						<Key>
+							<KeyName>Functional Groups/Thiol</KeyName>
+						</Key>
+					</Output>
+					<Output name="Tosyl" type="count">
+						<Key>
+							<KeyName>Functional Groups/Tosyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Butadiene" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Butadiene</KeyName>
+						</Key>
+					</Output>
+					<Output name="Butyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Butyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Ethyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Ethyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Ethylene" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Ethylene</KeyName>
+						</Key>
+					</Output>
+					<Output name="Isobutyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Isobutyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Isopropyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Isopropyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Methyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Methyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Propyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Propyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Propylene" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Propylene</KeyName>
+						</Key>
+					</Output>
+					<Output name="Secondary butyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Secondary Butyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Tertiary butyl" type="count">
+						<Key>
+							<KeyName>Hydrocarbons/Tertiary Butyl</KeyName>
+						</Key>
+					</Output>
+					<Output name="Phenyl" type="count">
+						<Key>
+							<KeyName>Rings/Benzene</KeyName>
+						</Key>
+					</Output>
+					<Output name="Cyclohexane" type="count">
+						<Key>
+							<KeyName>Rings/Cyclohexane</KeyName>
+						</Key>
+					</Output>
+					<Output name="Cytosine" type="count">
+						<Key>
+							<KeyName>Rings/Cytosine</KeyName>
+						</Key>
+					</Output>
+					<Output name="Indole" type="count">
+						<Key>
+							<KeyName>Rings/Indole</KeyName>
+						</Key>
+					</Output>
+					<OutputGroups number="3">
+						<OutputGroup name="Functional group count" category="Feature counts">
+							<OutputKey>Functional Groups/Acid Anhydride</OutputKey>
+							<OutputKey>Functional Groups/Acid Chloride</OutputKey>
+							<OutputKey>Functional Groups/Amide</OutputKey>
+							<OutputKey>Functional Groups/Amine</OutputKey>
+							<OutputKey>Functional Groups/Azo</OutputKey>
+							<OutputKey>Functional Groups/B-Dicarbonyl</OutputKey>
+							<OutputKey>Functional Groups/Carboxylate</OutputKey>
+							<OutputKey>Functional Groups/Carboxylic Acid</OutputKey>
+							<OutputKey>Functional Groups/Diazo+</OutputKey>
+							<OutputKey>Functional Groups/Glycerol</OutputKey>
+							<OutputKey>Functional Groups/Glycol</OutputKey>
+							<OutputKey>Functional Groups/Hydrazone</OutputKey>
+							<OutputKey>Functional Groups/Hydroxy</OutputKey>
+							<OutputKey>Functional Groups/Methanal</OutputKey>
+							<OutputKey>Functional Groups/Methoxy</OutputKey>
+							<OutputKey>Functional Groups/Nitrile</OutputKey>
+							<OutputKey>Functional Groups/Nitro</OutputKey>
+							<OutputKey>Functional Groups/Nitroso</OutputKey>
+							<OutputKey>Functional Groups/Oxime</OutputKey>
+							<OutputKey>Functional Groups/Peroxide</OutputKey>
+							<OutputKey>Functional Groups/Phenoxy</OutputKey>
+							<OutputKey>Functional Groups/Phosphate</OutputKey>
+							<OutputKey>Functional Groups/Quaternary Amine</OutputKey>
+							<OutputKey>Functional Groups/Sulfonic Acid</OutputKey>
+							<OutputKey>Functional Groups/Sulfoxy Amide</OutputKey>
+							<OutputKey>Functional Groups/Sulfoxy Chloride</OutputKey>
+							<OutputKey>Functional Groups/Sulfoxy Ester</OutputKey>
+							<OutputKey>Functional Groups/Thiol</OutputKey>
+							<OutputKey>Functional Groups/Tosyl</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Hydrocarbon count" category="Feature counts">
+							<OutputKey>Hydrocarbons/Butadiene</OutputKey>
+							<OutputKey>Hydrocarbons/Butyl</OutputKey>
+							<OutputKey>Hydrocarbons/Ethyl</OutputKey>
+							<OutputKey>Hydrocarbons/Ethylene</OutputKey>
+							<OutputKey>Hydrocarbons/Isobutyl</OutputKey>
+							<OutputKey>Hydrocarbons/Isopropyl</OutputKey>
+							<OutputKey>Hydrocarbons/Methyl</OutputKey>
+							<OutputKey>Hydrocarbons/Propyl</OutputKey>
+							<OutputKey>Hydrocarbons/Propylene</OutputKey>
+							<OutputKey>Hydrocarbons/Secondary Butyl</OutputKey>
+							<OutputKey>Hydrocarbons/Tertiary Butyl</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Ring count" category="Feature counts">
+							<OutputKey>Rings/Benzene</OutputKey>
+							<OutputKey>Rings/Cyclohexane</OutputKey>
+							<OutputKey>Rings/Cytosine</OutputKey>
+							<OutputKey>Rings/Indole</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMFragment" engineName="Fragment Count"/>
+				</Relationship>
+			</model>
+			<model>
+				<BasicInformation type="descriptor" GUID="{3EFFE56E-BFD1-46F4-8189-4D7F4C20D370}">
+					<Name>Atomistic Descriptors</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2003-09-25T17:06:27</DateCreated>
+					<DateModified>2003-09-25T17:06:27</DateModified>
+					<Note>A model to obtain atomic descriptor information</Note>
+				</BasicInformation>
+				<Inputs number="2">
+					<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+						<Key>
+							<KeyName>Structure</KeyName>
+						</Key>
+					</Input>
+					<Input name="Element name" type="element" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>Element name</KeyName>
+						</Key>
+						<Value>C</Value>
+					</Input>
+				</Inputs>
+				<Outputs number="5">
+					<Output name="Total charge" type="charge">
+						<Key>
+							<KeyName>Charge</KeyName>
+						</Key>
+					</Output>
+					<Output name="Total formal charge" type="charge">
+						<Key>
+							<KeyName>FormalCharge</KeyName>
+						</Key>
+					</Output>
+					<Output name="Total molecular mass" type="double">
+						<Key>
+							<KeyName>Mass</KeyName>
+						</Key>
+					</Output>
+					<Output name="Atom count" type="count">
+						<Key>
+							<KeyName>Atom count</KeyName>
+						</Key>
+					</Output>
+					<Output name="Element count" type="count">
+						<Key>
+							<KeyName>Element count</KeyName>
+						</Key>
+					</Output>
+					<OutputGroups number="5">
+						<OutputGroup name="Total charge" category="Charges">
+							<OutputKey>Charge</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Total formal charge" category="Charges">
+							<OutputKey>FormalCharge</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Total molecular mass" category="Structural">
+							<OutputKey>Mass</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Atom count" category="Feature counts">
+							<OutputKey>Atom count</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Element count" category="Feature counts">
+							<OutputKey>Element count</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineDMAtomistic" engineName="Atomistic Descriptors"/>
+				</Relationship>
+			</model>
+			<model>
+				<BasicInformation type="simulation" GUID="{3EDC0454-DF97-4177-9F45-7F2ACF97FF54}">
+					<Name>Forcite Energetics</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2003-09-25T17:06:27</DateCreated>
+					<DateModified>2023-03-21T13:46:41</DateModified>
+					<Note>A model to calculate descriptors using Forcite</Note>
+				</BasicInformation>
+				<Inputs number="7">
+					<Input name="Task type" type="enumeration" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>Task</KeyName>
+						</Key>
+						<Value>Geometry Optimization</Value>
+						<Range type="enumeration" number="2">
+							<Item name="Energy" value="1"/>
+							<Item name="Geometry Optimization" value="2"/>
+						</Range>
+					</Input>
+					<Input name="Quality" type="enumeration" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>CalculationQuality</KeyName>
+						</Key>
+						<Value>Ultra-fine</Value>
+						<Range type="enumeration" number="4">
+							<Item name="Coarse" value="1"/>
+							<Item name="Medium" value="2"/>
+							<Item name="Fine" value="3"/>
+							<Item name="Ultra-fine" value="4"/>
+						</Range>
+					</Input>
+					<Input name="Forcefield" type="enumeration" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>Forcefield</KeyName>
+						</Key>
+						<Value>COMPASSII</Value>
+						<Range type="enumeration" number="6">
+							<Item name="Universal" value="1"/>
+							<Item name="Dreiding" value="2"/>
+							<Item name="COMPASS" value="3"/>
+							<Item name="cvff" value="4"/>
+							<Item name="pcff" value="5"/>
+							<Item name="COMPASSII" value="6"/>
+						</Range>
+					</Input>
+					<Input name="Charge assignment" type="enumeration" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>AssignCharges</KeyName>
+						</Key>
+						<Value>Automatic</Value>
+						<Range type="enumeration" number="4">
+							<Item name="Charge using QEq" value="1"/>
+							<Item name="Charge using Gasteiger" value="2"/>
+							<Item name="Use current" value="3"/>
+							<Item name="Automatic" value="4"/>
+						</Range>
+					</Input>
+					<Input name="Forcefield typing" type="boolean" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>AssignForcefieldTypes</KeyName>
+						</Key>
+						<Value>-1</Value>
+					</Input>
+					<Input name="Optimize cell parameters" type="boolean" role="Parameter" permittedRoles="Parameter">
+						<Key>
+							<KeyName>ulAutoSetCell</KeyName>
+						</Key>
+						<Value>-1</Value>
+					</Input>
+					<Input name="Structure" type="structure" role="Variable" permittedRoles="Variable">
+						<Key>
+							<KeyName>Structure</KeyName>
+						</Key>
+					</Input>
+				</Inputs>
+				<Outputs number="21">
+					<Output name="Structure" type="structure">
+						<Key>
+							<KeyName>Optimized Structure</KeyName>
+						</Key>
+					</Output>
+					<Output name="Total energy" type="energy">
+						<Key>
+							<KeyName>PotentialEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Valence energy (diag. terms)" type="energy">
+						<Key>
+							<KeyName>ValenceDiagonalEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Bond energy" type="energy">
+						<Key>
+							<KeyName>BondEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Angle energy" type="energy">
+						<Key>
+							<KeyName>AngleEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Torsion energy" type="energy">
+						<Key>
+							<KeyName>TorsionEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Inversion energy" type="energy">
+						<Key>
+							<KeyName>InversionEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Valence energy (cross terms)" type="energy">
+						<Key>
+							<KeyName>ValenceCrossTermEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Stretch-Stretch energy" type="energy">
+						<Key>
+							<KeyName>StretchStretchEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Stretch-Bend-Stretch energy" type="energy">
+						<Key>
+							<KeyName>StretchBendStretchEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Stretch-Torsion-Stretch energy" type="energy">
+						<Key>
+							<KeyName>StretchTorsionStretchEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Separated-Stretch-Stretch energy" type="energy">
+						<Key>
+							<KeyName>SeparatedStretchStretchEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Torsion-Stretch energy" type="energy">
+						<Key>
+							<KeyName>TorsionStretchEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Bend-Bend energy" type="energy">
+						<Key>
+							<KeyName>BendBendEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Torsion-Bend-Bend energy" type="energy">
+						<Key>
+							<KeyName>TorsionBendBendEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Bend-Torsion-Bend energy" type="energy">
+						<Key>
+							<KeyName>BendTorsionBendEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Non bond energy" type="energy">
+						<Key>
+							<KeyName>NonBondEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Hydrogen bond energy" type="energy">
+						<Key>
+							<KeyName>HydrogenBondEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="van der Waals energy" type="energy">
+						<Key>
+							<KeyName>VanDerWaalsEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Electrostatic energy" type="energy">
+						<Key>
+							<KeyName>ElectrostaticEnergy</KeyName>
+						</Key>
+					</Output>
+					<Output name="Atomic charges" type="double" isArrayType="-1">
+						<Key>
+							<KeyName>AtomicCharges</KeyName>
+						</Key>
+					</Output>
+					<OutputGroups number="5">
+						<OutputGroup name="Structure" category="Structure">
+							<OutputKey>Optimized Structure</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Total energy" category="Energies">
+							<OutputKey>PotentialEnergy</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Non bond energy" category="Energies">
+							<OutputKey>NonBondEnergy</OutputKey>
+							<OutputKey>HydrogenBondEnergy</OutputKey>
+							<OutputKey>VanDerWaalsEnergy</OutputKey>
+							<OutputKey>ElectrostaticEnergy</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Configuration energy" category="Energies">
+							<OutputKey>ValenceDiagonalEnergy</OutputKey>
+							<OutputKey>BondEnergy</OutputKey>
+							<OutputKey>AngleEnergy</OutputKey>
+							<OutputKey>TorsionEnergy</OutputKey>
+							<OutputKey>InversionEnergy</OutputKey>
+							<OutputKey>ValenceCrossTermEnergy</OutputKey>
+							<OutputKey>StretchStretchEnergy</OutputKey>
+							<OutputKey>StretchBendStretchEnergy</OutputKey>
+							<OutputKey>StretchTorsionStretchEnergy</OutputKey>
+							<OutputKey>SeparatedStretchStretchEnergy</OutputKey>
+							<OutputKey>TorsionStretchEnergy</OutputKey>
+							<OutputKey>BendBendEnergy</OutputKey>
+							<OutputKey>TorsionBendBendEnergy</OutputKey>
+							<OutputKey>BendTorsionBendEnergy</OutputKey>
+						</OutputGroup>
+						<OutputGroup name="Atomic charges" category="Charges">
+							<OutputKey>AtomicCharges</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBPhysicalModelEngines.ModelEngineForcite" engineName="Forcite"/>
+				</Relationship>
+			</model>
+			<model>
+				<BasicInformation type="regression" GUID="{8A99D43C-BC01-4FD1-B413-B8305A3C01BC}">
+					<Name>GFA equation 1: prediction for C : I.S. (3)</Name>
+					<Author>BIOVIA</Author>
+					<DateCreated>2023-03-29T10:35:59</DateCreated>
+					<DateModified>2023-03-29T10:35:59</DateModified>
+					<Note>Generated by GFA analysis</Note>
+				</BasicInformation>
+				<Inputs number="41">
+					<Input name="K.P.I." type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X1</KeyName>
+						</Key>
+					</Input>
+					<Input name="OB" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X10</KeyName>
+						</Key>
+					</Input>
+					<Input name="1/exp(wN)" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X11</KeyName>
+						</Key>
+					</Input>
+					<Input name="H/(N+O)" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X12</KeyName>
+						</Key>
+					</Input>
+					<Input name="DU/Atoms" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X13</KeyName>
+						</Key>
+					</Input>
+					<Input name="Hydrogen bond acceptor" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X15</KeyName>
+						</Key>
+					</Input>
+					<Input name="AlogP" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X16</KeyName>
+						</Key>
+					</Input>
+					<Input name="Molecular refractivity" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X17</KeyName>
+						</Key>
+					</Input>
+					<Input name="Molecular flexibility" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X18</KeyName>
+						</Key>
+					</Input>
+					<Input name="Wiener index" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X19</KeyName>
+						</Key>
+					</Input>
+					<Input name="Cryst. dens." type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X2</KeyName>
+						</Key>
+					</Input>
+					<Input name="Kappa-3" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X20</KeyName>
+						</Key>
+					</Input>
+					<Input name="Kappa-1 (alpha modified)" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X21</KeyName>
+						</Key>
+					</Input>
+					<Input name="Subgraph counts (0): path" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X22</KeyName>
+						</Key>
+					</Input>
+					<Input name="Complementary information content (CIC)" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X23</KeyName>
+						</Key>
+					</Input>
+					<Input name="Edge distance/magnitude" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X24</KeyName>
+						</Key>
+					</Input>
+					<Input name="Vertex adjacency/magnitude" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X25</KeyName>
+						</Key>
+					</Input>
+					<Input name="Atomic composition (total)" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X26</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_sCH3" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X27</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_dsCH" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X28</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_tsC" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X29</KeyName>
+						</Key>
+					</Input>
+					<Input name="e/atoms" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X3</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_sNH3" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X30</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_dNH" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X31</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_tN" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X32</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_ddsN" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X33</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_dO" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X34</KeyName>
+						</Key>
+					</Input>
+					<Input name="E-state keys (sums): S_ssO" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X35</KeyName>
+						</Key>
+					</Input>
+					<Input name="Molecular density" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X36</KeyName>
+						</Key>
+					</Input>
+					<Input name="HOMO" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X37</KeyName>
+						</Key>
+					</Input>
+					<Input name="Miu" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X38</KeyName>
+						</Key>
+					</Input>
+					<Input name="Etot/atoms" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X39</KeyName>
+						</Key>
+					</Input>
+					<Input name="Valence energy (diag. terms)/atoms" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X4</KeyName>
+						</Key>
+					</Input>
+					<Input name="e/atoms (2)" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X40</KeyName>
+						</Key>
+					</Input>
+					<Input name="-N=/atom" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X41</KeyName>
+						</Key>
+					</Input>
+					<Input name="OH/atom" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X42</KeyName>
+						</Key>
+					</Input>
+					<Input name="Bond energy/atoms" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X5</KeyName>
+						</Key>
+					</Input>
+					<Input name="Stretch-Bend-Stretch energy/atoms" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X6</KeyName>
+						</Key>
+					</Input>
+					<Input name="wC" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X7</KeyName>
+						</Key>
+					</Input>
+					<Input name="1/AMW" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X8</KeyName>
+						</Key>
+					</Input>
+					<Input name="DU" type="numeric" role="Variable" permittedRoles="ParameterOrVariable">
+						<Key>
+							<KeyName>X9</KeyName>
+						</Key>
+					</Input>
+				</Inputs>
+				<Outputs number="1">
+					<Output name="GFA Prediction" type="double">
+						<Key>
+							<KeyName>Regression Prediction</KeyName>
+						</Key>
+					</Output>
+					<OutputGroups number="1">
+						<OutputGroup name="GFA Prediction" category="Empirical">
+							<OutputKey>Regression Prediction</OutputKey>
+						</OutputGroup>
+					</OutputGroups>
+				</Outputs>
+				<Relationship>
+					<SimpleEngine engineProgID="SBStatisticsModelEngines.ModelEngineRegression.1" engineName="Regression">
+						<EngineDetails>
+							<Value key="Equation" type="string"> 27.109990170 * [K.P.I.] \n     + 2.447422587 * [Cryst. dens.] \n     + 0.589316677 * [e/atoms] \n     + 0.757832355 * [Valence energy (diag. terms)/atoms] \n     - 25.356158540 * [Bond energy/atoms] \n     - 27.843539635 * [Stretch-Bend-Stretch energy/atoms] \n     + 42.909011781 * [wC] \n     + 754.225691971 * [1/AMW] \n     - 0.097770319 * [DU] \n     + 0.297100666 * [OB] \n     - 82.616522389 * [1/exp(wN)] \n     - 2.744249207 * [H/(N+O)] \n     + 70.590303304 * [DU/Atoms] \n     + 0.039719720 * [Hydrogen bond acceptor] \n     + 0.459447593 * [AlogP] \n     - 0.808490557 * [Molecular refractivity] \n     + 1.072270398 * [Molecular flexibility] \n     - 0.007070616 * [Wiener index] \n     - 0.985676271 * [Kappa-3] \n     - 2.409662176 * [Kappa-1 (alpha modified)] \n     + 8.510936026 * [Subgraph counts (0): path] \n     - 2.444534155 * [Complementary information content (CIC)] \n     + 0.004349352 * [Edge distance/magnitude] \n     - 0.343019888 * [Vertex adjacency/magnitude] \n     - 0.181745247 * [Atomic composition (total)] \n     - 0.615072355 * [E-state keys (sums): S_sCH3] \n     + 1.857593891 * [E-state keys (sums): S_dsCH] \n     - 6.069552656 * [E-state keys (sums): S_tsC] \n     + 0.273061236 * [E-state keys (sums): S_sNH3] \n     - 1.369539072 * [E-state keys (sums): S_dNH] \n     - 0.305515015 * [E-state keys (sums): S_tN] \n     - 0.749358008 * [E-state keys (sums): S_ddsN] \n     - 0.088002640 * [E-state keys (sums): S_dO] \n     - 0.116797137 * [E-state keys (sums): S_ssO] \n     + 11.144036266 * [Molecular density] \n     + 1.548694083 * [HOMO] \n     + 0.360186199 * [Miu] \n     - 0.879690720 * [Etot/atoms] \n     - 249.467955465 * [e/atoms (2)] \n     - 10.981518574 * [-N=/atom] \n     - 41.563331224 * [OH/atom] \n     - 24.176986652</Value>
+						</EngineDetails>
+						<SimpleEngineParameters>
+							<Value key="Equation" type="string"> 2.7109990169944247e+001 * X1  + 2.4474225871670456e+000 * X2  + 5.8931667681366129e-001 * X3  + 7.5783235511424185e-001 * X4  - 2.5356158539791256e+001 * X5  - 2.7843539634588311e+001 * X6  + 4.2909011781245759e+001 * X7  + 7.5422569197089626e+002 * X8  - 9.7770318869541586e-002 * X9  + 2.9710066634639637e-001 * X10  - 8.2616522389229132e+001 * X11  - 2.7442492069038700e+000 * X12  + 7.0590303303680926e+001 * X13  + 3.9719720234579856e-002 * X15  + 4.5944759342270219e-001 * X16  - 8.0849055730822939e-001 * X17  + 1.0722703984994970e+000 * X18  - 7.0706162756988475e-003 * X19  - 9.8567627125644319e-001 * X20  - 2.4096621763800417e+000 * X21  + 8.5109360255055311e+000 * X22  - 2.4445341554905382e+000 * X23  + 4.3493518774899978e-003 * X24  - 3.4301988817216372e-001 * X25  - 1.8174524739691689e-001 * X26  - 6.1507235463015952e-001 * X27  + 1.8575938908735781e+000 * X28  - 6.0695526558907016e+000 * X29  + 2.7306123594755105e-001 * X30  - 1.3695390722986915e+000 * X31  - 3.0551501549351312e-001 * X32  - 7.4935800777296635e-001 * X33  - 8.8002639870824295e-002 * X34  - 1.1679713656505016e-001 * X35  + 1.1144036265943775e+001 * X36  + 1.5486940826429776e+000 * X37  + 3.6018619923154499e-001 * X38  - 8.7969072015400418e-001 * X39  - 2.4946795546528813e+002 * X40  - 1.0981518573846605e+001 * X41  - 4.1563331223934888e+001 * X42  - 2.4176986652418641e+001</Value>
+						</SimpleEngineParameters>
+					</SimpleEngine>
+				</Relationship>
+			</model>
+		</models>
+		<predictions>
+			<prediction id="{BCF715E7-42E6-4DA1-AFF0-452B7DE93F13}">
+				<inputs>
+					<Value key="Structure">{A83831C3-5273-4DC0-8D2D-96C815F0586B}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Atom count">{13ECD624-1297-486D-B57D-F91754A3F32A}</Value>
+				</outputs>
+				<modelId>{B10AE105-AB3A-4524-8610-5EDCC504ABEB}</modelId>
+			</prediction>
+			<prediction id="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}">
+				<inputs>
+					<Value key="Structure">{942ADE71-4C26-4EBB-A5A0-2AC6F55C6DA0}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Rotlbonds">{CCFE30E4-B7A7-46D0-9AEF-23FE8B7AD338}</Value>
+					<Value key="Hbond donor">{037ED2F0-4801-46A4-A229-7C473E5635FC}</Value>
+					<Value key="Hbond acceptor">{8EDFD124-77D3-40F8-9E39-FB2B10AA757F}</Value>
+					<Value key="Chiral centers">{7E2171BA-7FE3-49B2-ACD0-496C228FE4D1}</Value>
+					<Value key="AlogP">{FD85F445-6A74-45F1-A8FA-F66F99FE3B71}</Value>
+					<Value key="AlogP98">{D0CE907D-2FD5-417F-A637-08A5A16C0C5F}</Value>
+					<Value key="MolRef">{7197BB8B-F2E2-416A-A74B-662095D0D30A}</Value>
+					<Value key="PHI">{8465287C-4D18-4467-A560-BAAF5EA38B98}</Value>
+					<Value key="JX">{3F2F16AB-83D1-4F15-85AD-39668829809D}</Value>
+					<Value key="JY">{6EB902CB-1A01-455F-9662-E212B2422F01}</Value>
+					<Value key="Wiener">{0B29A498-42A3-4574-A395-FFAA5D678B4E}</Value>
+					<Value key="Zagreb">{D86A6F6A-9113-47DA-8152-4F67371F2ABF}</Value>
+					<ArrayValue key="KAPPA">
+						<Item>{10DDA0CB-C892-4DE9-8555-590DF6107015}</Item>
+						<Item>{3408C0E1-4990-4206-BC0C-8EACE5AECAE1}</Item>
+						<Item>{5A260113-8A8B-43B4-940A-03D8016DC6F5}</Item>
+					</ArrayValue>
+					<ArrayValue key="KAPPA-AM">
+						<Item>{0E5A754D-26B5-41F1-BA3B-06800653E87F}</Item>
+						<Item>{6937331F-A6BE-470E-9E00-7801D4E06A9A}</Item>
+						<Item>{8E881F16-6FA8-495D-A762-6190437B2B0B}</Item>
+					</ArrayValue>
+					<ArrayValue key="SC03">
+						<Item>{F0129AF5-5921-4179-BF11-13E9AF3C4BCF}</Item>
+						<Item>{BB84E3A4-9164-47AF-87AB-86E8F5B8CFA1}</Item>
+						<Item>{ABFDC707-14B2-41C2-ABDA-9C81A716872A}</Item>
+						<Item>{E21BE8BE-FED0-41D6-BF55-E0136D5CFBA8}</Item>
+						<Item>{2FF4EC98-7789-44AA-AC0B-78B09CE05E77}</Item>
+						<Item>{57D0DE21-29B6-4912-B172-635B4CF1A01D}</Item>
+					</ArrayValue>
+					<ArrayValue key="CHI03">
+						<Item>{622E8AEE-B5FA-41D1-ABEB-4BF264EABFFF}</Item>
+						<Item>{FF87FCF3-B261-450F-9EFA-3C7F13FD92ED}</Item>
+						<Item>{E966858C-01D8-4628-8D92-2782A8E15D5B}</Item>
+						<Item>{A0F72544-EF18-46C9-9E0C-7295083913E1}</Item>
+						<Item>{51BB84E6-9D54-4388-BE6F-2AD9A33EAF78}</Item>
+						<Item>{8F559D70-FE86-4662-AE04-CD08C0BBEB00}</Item>
+					</ArrayValue>
+					<ArrayValue key="CHIV03">
+						<Item>{4A2C96C2-E504-4727-8697-770B8E3109FB}</Item>
+						<Item>{EE1F104C-4601-47BF-B011-B42579A42F3D}</Item>
+						<Item>{BCF87999-49B9-4CB0-BD7F-7851AE71C90F}</Item>
+						<Item>{939394D8-9363-4F26-B2C5-993F989D5C89}</Item>
+						<Item>{E9AFA406-88FB-42FF-B49C-DF51EDC1E8D0}</Item>
+						<Item>{73764A68-C66A-44CC-91C3-1CFF9D8E486B}</Item>
+					</ArrayValue>
+					<Value key="IC">{B9F8C9DF-70AE-4848-A6F5-4AB598423691}</Value>
+					<Value key="BIC">{ACB73406-3155-46F1-A74B-59CFCA97768E}</Value>
+					<Value key="CIC">{BFD04059-F704-4858-9B65-B40B72A8E850}</Value>
+					<Value key="SIC">{A2D25789-2C20-40BB-91D7-6CE534503CB3}</Value>
+					<Value key="E-ADJ-mag">{4176ADE6-0411-4082-B7E2-D5EC82BF94EB}</Value>
+					<Value key="E-DIST-mag">{58E5D140-ABDA-4724-AAD0-D2F4FEF772F8}</Value>
+					<Value key="V-ADJ-equ">{80ECB552-CB45-473B-8C22-2ABE71A970E6}</Value>
+					<Value key="V-ADJ-mag">{4A3921FD-EE63-47EE-9333-935A0B26DD17}</Value>
+					<Value key="V-DIST-equ">{C4D51869-2FA0-4A69-A4DA-7C189647B2F0}</Value>
+					<Value key="V-DIST-mag">{F5EA0000-2339-4776-A507-E5E11B56790A}</Value>
+					<Value key="IAC-Total">{EFAD44D6-FC1A-4C05-BE16-20A06923CC6F}</Value>
+					<ArrayValue key="ESUMS">
+						<Item>{EF772774-9782-41AD-8E48-E22DA97CD2BA}</Item>
+						<Item>{A68ED1EC-586F-44B9-8697-C34243EF259B}</Item>
+						<Item>{333FBA06-9A24-41B0-8507-34364C9EA1F0}</Item>
+						<Item>{01D09265-F09D-4C2E-A71A-A383F7F5C99B}</Item>
+						<Item>{6E03E6EC-2187-417C-9BAE-BA5372183E7D}</Item>
+						<Item>{19764763-6163-480E-B4A3-A13382FF92BD}</Item>
+						<Item>{BC935457-6F09-4514-8169-FD5099AAA8AD}</Item>
+						<Item>{711A18B5-1B27-48FA-BA49-E113F28921A7}</Item>
+						<Item>{68E9BECE-045A-41AF-B7E0-DBEE99DF0DDB}</Item>
+						<Item>{B5F8A36F-1FFD-45E6-9BC6-F265BAFA784C}</Item>
+						<Item>{38B6C5CA-7201-4510-8A75-9AF8B66BB8CF}</Item>
+						<Item>{5100B411-0502-4432-BCB0-1BD036C5C554}</Item>
+						<Item>{DB631448-D956-4E5C-80FF-239CDD7B109C}</Item>
+						<Item>{44A87CBD-19EA-4108-8641-56C80B3D674C}</Item>
+						<Item>{79E4EB65-6ABD-44AC-B759-904DDE5DD7F4}</Item>
+						<Item>{D413576D-6FB9-4027-A277-87C612F1C7E8}</Item>
+						<Item>{EBA70AA2-DDC4-4CE4-9D8D-814759F46508}</Item>
+						<Item>{49D812BB-6972-4DA0-98C1-019888BDBF97}</Item>
+						<Item>{61227DC1-AC07-4144-992E-B2EBA0844BE0}</Item>
+						<Item>{0D3720B3-197F-4365-94E6-5A22F7328B91}</Item>
+						<Item>{B7AD11E6-63EA-4C28-BF59-B6484DE75A11}</Item>
+						<Item>{F2C2C8A2-B2B6-4D2B-B61D-3E1C1F83D874}</Item>
+						<Item>{F85504F2-7EAC-420E-99D4-2EBFCEA8B38B}</Item>
+						<Item>{44A08817-CA2F-4B57-A5CF-1EF6AD9CF205}</Item>
+						<Item>{BB46B29A-AAE8-4377-8386-B64F4FD28E02}</Item>
+						<Item>{489796CA-604D-4CDC-BBEC-98D4F857D78B}</Item>
+						<Item>{F3A8F261-453F-46E4-92F9-06059C55F086}</Item>
+						<Item>{1CA0323C-6D77-46DD-849F-490E2397D234}</Item>
+						<Item>{32C680D9-64B0-4B89-858C-2067179A22DE}</Item>
+						<Item>{B20D982D-954C-43CF-927B-686ADFEA90AB}</Item>
+						<Item>{02B59B26-7F76-460F-9E84-718DDF96D935}</Item>
+						<Item>{FC9E6383-B6B3-48DB-AED9-DADF85D8FB21}</Item>
+						<Item>{6096EC32-ABE0-48BB-94CB-5671369599EC}</Item>
+						<Item>{B1CC99FB-6373-4FCC-971F-95F4CAF45F18}</Item>
+						<Item>{B6FF9F63-81E5-414A-8E5C-6136EADF3AF2}</Item>
+						<Item>{E1619953-859C-42A4-A327-CF05C67FAF71}</Item>
+						<Item>{73FDA0E8-610A-4E81-9CD0-EAF18500814B}</Item>
+						<Item>{78948CEB-62A3-4866-A0C9-1F8CA637DD94}</Item>
+						<Item>{BF08AF2A-F36B-4835-88B7-E40FA8BE718E}</Item>
+						<Item>{F9D76754-BD59-4389-8B0F-B6C68BCC7C30}</Item>
+						<Item>{9D7FD64A-1EE7-4BD1-BC04-A849723BA61E}</Item>
+						<Item>{A1624EE5-D3E1-4D5B-AF3B-E1B0B3193167}</Item>
+						<Item>{D842CE12-F998-4B44-9453-BD8307493481}</Item>
+						<Item>{BDCB6CF2-AD04-4281-A33C-472E5F810B48}</Item>
+						<Item>{20FB19FB-37CC-49DD-B533-DA59098EC0B6}</Item>
+						<Item>{D107A461-B3CF-4A3E-8DEE-49BDC3FD9051}</Item>
+						<Item>{6715C982-051C-4DA0-A08A-861DE051AF24}</Item>
+						<Item>{0554FEA4-61BD-4D90-8A92-DDB6579A29B4}</Item>
+						<Item>{E62FCB3D-CB82-43BA-ADE0-80E8D8E0C1C6}</Item>
+						<Item>{1F0D0CD4-5CEC-4947-927E-08979A8B7D6A}</Item>
+						<Item>{8DE40C91-6672-432F-B99E-06872074D678}</Item>
+						<Item>{8F6E92CA-8007-4726-B577-92C94FF602A8}</Item>
+						<Item>{E194A375-1108-4F02-88E7-458DE68CFB41}</Item>
+						<Item>{C0C2E4F8-F0BD-4ACD-8670-45D22D1E0EE7}</Item>
+						<Item>{59CE1252-EF1C-423C-9969-ABF633B9FC52}</Item>
+						<Item>{145906E4-7289-4E79-AF2D-805787DBFC66}</Item>
+						<Item>{A0E44126-68A5-4B96-BB67-E519D3422005}</Item>
+						<Item>{3E4CC7F2-A087-4CDB-A592-EA495231F3D0}</Item>
+						<Item>{D73277DC-8802-4F04-894A-7A9CCD811905}</Item>
+						<Item>{80153DD2-F08E-4EAD-BA5A-A495EA6FEB1C}</Item>
+						<Item>{F0EF264D-5D5E-4850-9885-EBE5C53FC443}</Item>
+						<Item>{AFBBFC9C-A907-444B-99DB-AFBF3D021854}</Item>
+						<Item>{0B7784D9-6B6A-4863-94C8-00867FA07AD7}</Item>
+						<Item>{5063F53D-86BB-4E44-8B39-55B3D178CB41}</Item>
+						<Item>{37989281-58E7-4982-AB10-51A1AD4EB014}</Item>
+						<Item>{E5B11E21-DE92-4052-B1D9-6F3B6FA4E418}</Item>
+						<Item>{A1EBB398-CA26-4BBE-AAA0-E01D7D12B82C}</Item>
+						<Item>{CBAAF3E3-C4DD-476C-B3D7-400290971959}</Item>
+						<Item>{EEAEBDD1-58CC-4B3E-9174-D2EBEF2E204C}</Item>
+						<Item>{CA05A8C1-76DB-4D17-9113-5612CA2F83E3}</Item>
+						<Item>{EADF28B0-9335-4390-A75F-802512E820A8}</Item>
+						<Item>{A4884D4A-AF8D-439D-9EFE-33B2FC38ED74}</Item>
+						<Item>{5D204A0C-78F2-457C-8FAB-4C5C1267D729}</Item>
+						<Item>{83EC4A85-798C-4B78-827C-9DE6C7039D4A}</Item>
+						<Item>{E6D8D41A-539E-4408-AADF-6B38EF952136}</Item>
+						<Item>{3A7D0729-E008-41BC-ADB5-974D4CD2E39F}</Item>
+						<Item>{2A8659FD-9601-4444-8183-9921224CD3D2}</Item>
+						<Item>{3673C585-6F10-47DF-97EF-6604ECB1E546}</Item>
+						<Item>{F8380002-8E10-452C-95B8-8E7A275CA9FE}</Item>
+					</ArrayValue>
+				</outputs>
+				<modelId>{6E1BA73D-F756-4590-87DE-6E0C725CBE2F}</modelId>
+			</prediction>
+			<prediction id="{DC9460E3-A577-4B83-95F3-12BAE5F23B76}">
+				<inputs>
+					<Value key="Structure">{942ADE71-4C26-4EBB-A5A0-2AC6F55C6DA0}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Density">{651165FB-8826-4743-8B1C-DCE21AC914B4}</Value>
+				</outputs>
+				<modelId>{ABD7486A-CDF2-463A-BC1A-75D0CC96C083}</modelId>
+			</prediction>
+			<prediction id="{CECFA2FB-2102-467A-9B93-16F8200348F9}">
+				<inputs>
+					<Value key="Structure">{942ADE71-4C26-4EBB-A5A0-2AC6F55C6DA0}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Atom count">{59C3E5DD-C6A2-40A3-85AD-3F6668CCF36A}</Value>
+				</outputs>
+				<modelId>{4CC363A0-E0C1-4102-B023-D2889B61EA6C}</modelId>
+			</prediction>
+			<prediction id="{93057BDC-B4E5-4062-B7AB-197DCD6067F6}">
+				<inputs>
+					<Value key="Structure">{942ADE71-4C26-4EBB-A5A0-2AC6F55C6DA0}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Functional Groups/Acid Anhydride">{5B5F92B4-7CAF-437A-8847-9CAB157DFD7C}</Value>
+					<Value key="Functional Groups/Acid Chloride">{32CD7D41-1BDA-42BF-8A55-83224172A9A9}</Value>
+					<Value key="Functional Groups/Amide">{98918AD3-2325-45A0-996D-6E5A3AC2F99F}</Value>
+					<Value key="Functional Groups/Amine">{687DC101-9486-4A82-ACE8-C94DA4607E6F}</Value>
+					<Value key="Functional Groups/Azo">{4615CCB8-B2AA-4CCC-AAEA-64A9F28D815D}</Value>
+					<Value key="Functional Groups/B-Dicarbonyl">{62F42754-E944-45A7-B771-73003D48B274}</Value>
+					<Value key="Functional Groups/Carboxylate">{A170F399-08EB-4289-AFF0-94A73F09E448}</Value>
+					<Value key="Functional Groups/Carboxylic Acid">{086B867C-CCE1-4B38-9E6C-30787E476F8C}</Value>
+					<Value key="Functional Groups/Diazo+">{776329A8-10A7-4403-8062-1EFA5F7CB331}</Value>
+					<Value key="Functional Groups/Glycerol">{951D446F-DACF-4017-9AAF-073642712E85}</Value>
+					<Value key="Functional Groups/Glycol">{99E5405F-BFBB-402A-AE7F-9DE232AB9E9C}</Value>
+					<Value key="Functional Groups/Hydrazone">{D19A5447-EAEC-4226-8D54-6F9994C54F61}</Value>
+					<Value key="Functional Groups/Hydroxy">{CCE728F8-FBE4-420B-A894-9EBF8C78F795}</Value>
+					<Value key="Functional Groups/Methanal">{803FCD5F-EAD0-46D4-A019-38A40AC8089C}</Value>
+					<Value key="Functional Groups/Methoxy">{AA7270B2-62E0-4038-9E5F-822B38EC5F89}</Value>
+					<Value key="Functional Groups/Nitrile">{800EFCEE-81DD-4573-AD01-3FA9E7C2A16A}</Value>
+					<Value key="Functional Groups/Nitro">{EE5B199F-CC28-47C1-AAA7-80071F37DDBE}</Value>
+					<Value key="Functional Groups/Nitroso">{093457B5-8416-40FA-9EA9-82590CEE981A}</Value>
+					<Value key="Functional Groups/Oxime">{1F48533D-45B6-4FB0-8C48-5F741A1B4956}</Value>
+					<Value key="Functional Groups/Peroxide">{08808064-8E69-479C-B451-FEC9DE1B6E7A}</Value>
+					<Value key="Functional Groups/Phenoxy">{0897EF35-7EFB-4C84-B420-F889C0F2FDE1}</Value>
+					<Value key="Functional Groups/Phosphate">{C146C9BF-FAD4-4FE9-AA45-0BC32A161975}</Value>
+					<Value key="Functional Groups/Quaternary Amine">{FBEEA817-FD25-4667-B7FE-8CAAD9221CC3}</Value>
+					<Value key="Functional Groups/Sulfonic Acid">{03387AC6-21CB-4C00-BB0A-1C44436314AF}</Value>
+					<Value key="Functional Groups/Sulfoxy Amide">{C49B5CEE-32CE-4915-96CB-91339840E6AF}</Value>
+					<Value key="Functional Groups/Sulfoxy Chloride">{8B45CA72-1C22-4A9F-A83B-6E8C904C7A4A}</Value>
+					<Value key="Functional Groups/Sulfoxy Ester">{FD1303F2-5EFF-499D-BD07-313ABCFD814F}</Value>
+					<Value key="Functional Groups/Thiol">{F42D8D10-35A6-41E5-95BD-10EF94A06DE4}</Value>
+					<Value key="Functional Groups/Tosyl">{9D430DD8-ABAF-47BD-A5C6-847FE80B5959}</Value>
+				</outputs>
+				<modelId>{5A441CDE-0AEC-4518-8E90-0398E6401608}</modelId>
+			</prediction>
+			<prediction id="{9B0E4DCE-B4FD-47D8-BF39-9AF7B24E082C}">
+				<inputs>
+					<Value key="Structure">{A83831C3-5273-4DC0-8D2D-96C815F0586B}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Mass">{8435F352-320B-466A-85A5-BBD33A9778DA}</Value>
+				</outputs>
+				<modelId>{3EFFE56E-BFD1-46F4-8189-4D7F4C20D370}</modelId>
+			</prediction>
+			<prediction id="{7963CBCA-856C-43E2-B340-74409902F5F0}">
+				<inputs>
+					<Value key="Structure">{A83831C3-5273-4DC0-8D2D-96C815F0586B}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Optimized Structure">{F92EBA6C-DB59-4D81-A1F0-753392A00983}</Value>
+					<Value key="PotentialEnergy">{423CFC86-852B-4F75-81F4-A6E5B6DCB308}</Value>
+					<Value key="NonBondEnergy">{B539B80D-C2D5-40A4-AAF1-08EC63FE394A}</Value>
+					<Value key="HydrogenBondEnergy">{71D0760B-59DF-48C6-A808-D89FA83F3E8D}</Value>
+					<Value key="VanDerWaalsEnergy">{9DC62D20-41C6-4BED-9CAA-B128A6AECFDC}</Value>
+					<Value key="ElectrostaticEnergy">{AAE7B642-EE06-4934-A2AE-7BEE6058299B}</Value>
+					<Value key="ValenceDiagonalEnergy">{1F31E997-CF1A-4CC8-B30E-BB7A2247D23D}</Value>
+					<Value key="BondEnergy">{5E2738F5-27BA-43D1-A37D-75CDA6E98C0B}</Value>
+					<Value key="AngleEnergy">{8A939580-E363-4F69-84B1-8091FA3EC5FC}</Value>
+					<Value key="TorsionEnergy">{8FA7C63E-BEFB-4261-8F65-67CFE54BCB75}</Value>
+					<Value key="InversionEnergy">{9BDF9F63-9207-4AD8-B0F3-4E28119304AE}</Value>
+					<Value key="ValenceCrossTermEnergy">{94861D0A-5245-4301-BA2D-1D4FBE81D5A7}</Value>
+					<Value key="StretchStretchEnergy">{D138E049-6246-4402-862F-699E40AD634A}</Value>
+					<Value key="StretchBendStretchEnergy">{3E9D1D1C-FEBE-48D5-A206-70C44DCEFA61}</Value>
+					<Value key="StretchTorsionStretchEnergy">{1CCD31B0-7160-48CB-99CD-F235492B013F}</Value>
+					<Value key="SeparatedStretchStretchEnergy">{ADC6DB8B-A6ED-4A59-A1D9-3EEED0D35318}</Value>
+					<Value key="TorsionStretchEnergy">{BD6D37B2-5662-4CDF-93C3-8C328D6BFECB}</Value>
+					<Value key="BendBendEnergy">{0446B858-825E-47A4-8B78-00E5666777E4}</Value>
+					<Value key="TorsionBendBendEnergy">{3F608AC4-8CA2-4CE0-85A5-C978883621B0}</Value>
+					<Value key="BendTorsionBendEnergy">{DE2A0A72-9DCE-4B9D-B075-EBD7C97D6A17}</Value>
+				</outputs>
+				<modelId>{3EDC0454-DF97-4177-9F45-7F2ACF97FF54}</modelId>
+			</prediction>
+			<prediction id="{E6CE0436-1CB9-4514-BD20-FCF444CB0296}">
+				<inputs>
+					<Value key="X1">{CAAA988E-6DAF-4654-AE4E-66555D77C7A9}</Value>
+					<Value key="X10">{E064E3F7-AA36-464F-8FBE-C4BDF0E96B6E}</Value>
+					<Value key="X11">{31F82506-C940-423F-B411-6BCDDD48991F}</Value>
+					<Value key="X12">{983C78D9-1EA7-4ED6-9947-A00250FE0308}</Value>
+					<Value key="X13">{5ABCFB4E-8686-4F61-A667-794D144F3252}</Value>
+					<Value key="X15">{8EDFD124-77D3-40F8-9E39-FB2B10AA757F}</Value>
+					<Value key="X16">{FD85F445-6A74-45F1-A8FA-F66F99FE3B71}</Value>
+					<Value key="X17">{7197BB8B-F2E2-416A-A74B-662095D0D30A}</Value>
+					<Value key="X18">{8465287C-4D18-4467-A560-BAAF5EA38B98}</Value>
+					<Value key="X19">{0B29A498-42A3-4574-A395-FFAA5D678B4E}</Value>
+					<Value key="X2">{67AF32E8-1E5D-401F-8CC4-AF30E2771199}</Value>
+					<Value key="X20">{5A260113-8A8B-43B4-940A-03D8016DC6F5}</Value>
+					<Value key="X21">{0E5A754D-26B5-41F1-BA3B-06800653E87F}</Value>
+					<Value key="X22">{F0129AF5-5921-4179-BF11-13E9AF3C4BCF}</Value>
+					<Value key="X23">{BFD04059-F704-4858-9B65-B40B72A8E850}</Value>
+					<Value key="X24">{58E5D140-ABDA-4724-AAD0-D2F4FEF772F8}</Value>
+					<Value key="X25">{4A3921FD-EE63-47EE-9333-935A0B26DD17}</Value>
+					<Value key="X26">{EFAD44D6-FC1A-4C05-BE16-20A06923CC6F}</Value>
+					<Value key="X27">{EF772774-9782-41AD-8E48-E22DA97CD2BA}</Value>
+					<Value key="X28">{6E03E6EC-2187-417C-9BAE-BA5372183E7D}</Value>
+					<Value key="X29">{68E9BECE-045A-41AF-B7E0-DBEE99DF0DDB}</Value>
+					<Value key="X3">{42DB06E8-3383-4E38-A018-E0155BF1CF88}</Value>
+					<Value key="X30">{44A87CBD-19EA-4108-8641-56C80B3D674C}</Value>
+					<Value key="X31">{EBA70AA2-DDC4-4CE4-9D8D-814759F46508}</Value>
+					<Value key="X32">{0D3720B3-197F-4365-94E6-5A22F7328B91}</Value>
+					<Value key="X33">{BB46B29A-AAE8-4377-8386-B64F4FD28E02}</Value>
+					<Value key="X34">{32C680D9-64B0-4B89-858C-2067179A22DE}</Value>
+					<Value key="X35">{B20D982D-954C-43CF-927B-686ADFEA90AB}</Value>
+					<Value key="X36">{651165FB-8826-4743-8B1C-DCE21AC914B4}</Value>
+					<Value key="X37">{75C75554-6831-4421-A116-B81B684D469A}</Value>
+					<Value key="X38">{BDF4FF96-E9D5-43C7-9667-2BDC6151F194}</Value>
+					<Value key="X39">{044423B5-D878-40CA-B54F-1AEBF9F5AAE7}</Value>
+					<Value key="X4">{2D65FF4D-85CB-4683-AA4D-D6BDC9CE37A8}</Value>
+					<Value key="X40">{B45920A3-974D-431A-AFCD-D83ED2862120}</Value>
+					<Value key="X41">{F42E5B13-430D-43F1-9395-484D5A40AAD7}</Value>
+					<Value key="X42">{2510D87D-BE8A-4F2B-B750-7FCDB9199E4E}</Value>
+					<Value key="X5">{36C7C8ED-B14F-480A-B21F-31BA70DEC691}</Value>
+					<Value key="X6">{6F6C079C-7199-4A2E-BA80-47F26D453EC9}</Value>
+					<Value key="X7">{46C9E688-8163-4B96-939A-6236B8E2B015}</Value>
+					<Value key="X8">{E72AA433-C6B0-4B50-B194-795500F88252}</Value>
+					<Value key="X9">{16A32F5C-F4D5-474B-8AF3-8077BFC97D5F}</Value>
+				</inputs>
+				<outputs>
+					<Value key="Regression Prediction">{12B8C43A-975E-41D3-97EB-17A6D40DD23B}</Value>
+				</outputs>
+				<modelId>{8A99D43C-BC01-4FD1-B413-B8305A3C01BC}</modelId>
+			</prediction>
+		</predictions>
+		<fields>
+			<field id="{0F8801B8-55C0-4C1D-9914-12333DB9C755}"/>
+			<field id="{A83831C3-5273-4DC0-8D2D-96C815F0586B}" type="structure" description="Crystals"/>
+			<field id="{56ABAC15-F3DF-4C8F-B019-59D7277264ED}" description="I.S."/>
+			<field id="{CAAA988E-6DAF-4654-AE4E-66555D77C7A9}" description="K.P.I."/>
+			<field id="{67AF32E8-1E5D-401F-8CC4-AF30E2771199}" description="Cryst. dens."/>
+			<field id="{42DB06E8-3383-4E38-A018-E0155BF1CF88}" description="ecorr/atoms"/>
+			<field id="{13ECD624-1297-486D-B57D-F91754A3F32A}" type="count" sourceId="{BCF715E7-42E6-4DA1-AFF0-452B7DE93F13}"/>
+			<field id="{2D65FF4D-85CB-4683-AA4D-D6BDC9CE37A8}" description="Valence energy (diag. terms)/atoms"/>
+			<field id="{36C7C8ED-B14F-480A-B21F-31BA70DEC691}" description="Bond energy/atoms"/>
+			<field id="{6F6C079C-7199-4A2E-BA80-47F26D453EC9}" description="Stretch-Bend-Stretch energy/atoms"/>
+			<field id="{46C9E688-8163-4B96-939A-6236B8E2B015}" description="wC"/>
+			<field id="{E72AA433-C6B0-4B50-B194-795500F88252}" description="1/AMW"/>
+			<field id="{16A32F5C-F4D5-474B-8AF3-8077BFC97D5F}" description="DU"/>
+			<field id="{E064E3F7-AA36-464F-8FBE-C4BDF0E96B6E}" description="OB"/>
+			<field id="{31F82506-C940-423F-B411-6BCDDD48991F}" description="1/exp(wN)"/>
+			<field id="{983C78D9-1EA7-4ED6-9947-A00250FE0308}" description="H/(N+O)"/>
+			<field id="{5ABCFB4E-8686-4F61-A667-794D144F3252}" description="DU/Atoms"/>
+			<field id="{942ADE71-4C26-4EBB-A5A0-2AC6F55C6DA0}" type="structure" description="Mol. Structures"/>
+			<field id="{8EDFD124-77D3-40F8-9E39-FB2B10AA757F}" type="count" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{FD85F445-6A74-45F1-A8FA-F66F99FE3B71}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{7197BB8B-F2E2-416A-A74B-662095D0D30A}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{8465287C-4D18-4467-A560-BAAF5EA38B98}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{0B29A498-42A3-4574-A395-FFAA5D678B4E}" type="long" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{5A260113-8A8B-43B4-940A-03D8016DC6F5}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{0E5A754D-26B5-41F1-BA3B-06800653E87F}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{F0129AF5-5921-4179-BF11-13E9AF3C4BCF}" type="count" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{BFD04059-F704-4858-9B65-B40B72A8E850}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{58E5D140-ABDA-4724-AAD0-D2F4FEF772F8}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{4A3921FD-EE63-47EE-9333-935A0B26DD17}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{EFAD44D6-FC1A-4C05-BE16-20A06923CC6F}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{EF772774-9782-41AD-8E48-E22DA97CD2BA}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{6E03E6EC-2187-417C-9BAE-BA5372183E7D}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{68E9BECE-045A-41AF-B7E0-DBEE99DF0DDB}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{44A87CBD-19EA-4108-8641-56C80B3D674C}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{EBA70AA2-DDC4-4CE4-9D8D-814759F46508}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{0D3720B3-197F-4365-94E6-5A22F7328B91}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{BB46B29A-AAE8-4377-8386-B64F4FD28E02}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{32C680D9-64B0-4B89-858C-2067179A22DE}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{B20D982D-954C-43CF-927B-686ADFEA90AB}" type="double" sourceId="{DAA9BBFF-FA26-4482-A65F-050C6FED105C}"/>
+			<field id="{651165FB-8826-4743-8B1C-DCE21AC914B4}" type="double" sourceId="{DC9460E3-A577-4B83-95F3-12BAE5F23B76}"/>
+			<field id="{59C3E5DD-C6A2-40A3-85AD-3F6668CCF36A}" type="count" sourceId="{CECFA2FB-2102-467A-9B93-16F8200348F9}"/>
+			<field id="{75C75554-6831-4421-A116-B81B684D469A}" description="HOMO"/>
+			<field id="{BDF4FF96-E9D5-43C7-9667-2BDC6151F194}" description="Miu"/>
+			<field id="{044423B5-D878-40CA-B54F-1AEBF9F5AAE7}" description="HOF/atoms"/>
+			<field id="{B45920A3-974D-431A-AFCD-D83ED2862120}" description="e/atoms"/>
+			<field id="{687DC101-9486-4A82-ACE8-C94DA4607E6F}" type="count" sourceId="{93057BDC-B4E5-4062-B7AB-197DCD6067F6}"/>
+			<field id="{CCE728F8-FBE4-420B-A894-9EBF8C78F795}" type="count" sourceId="{93057BDC-B4E5-4062-B7AB-197DCD6067F6}"/>
+			<field id="{F42E5B13-430D-43F1-9395-484D5A40AAD7}" description="-N=/atom"/>
+			<field id="{2510D87D-BE8A-4F2B-B750-7FCDB9199E4E}" description="OH/atom"/>
+			<field id="{8435F352-320B-466A-85A5-BBD33A9778DA}" type="double" sourceId="{9B0E4DCE-B4FD-47D8-BF39-9AF7B24E082C}"/>
+			<field id="{F92EBA6C-DB59-4D81-A1F0-753392A00983}" type="structure" sourceId="{7963CBCA-856C-43E2-B340-74409902F5F0}"/>
+			<field id="{1F31E997-CF1A-4CC8-B30E-BB7A2247D23D}" type="energy" sourceId="{7963CBCA-856C-43E2-B340-74409902F5F0}"/>
+			<field id="{5E2738F5-27BA-43D1-A37D-75CDA6E98C0B}" type="energy" sourceId="{7963CBCA-856C-43E2-B340-74409902F5F0}"/>
+			<field id="{3E9D1D1C-FEBE-48D5-A206-70C44DCEFA61}" type="energy" sourceId="{7963CBCA-856C-43E2-B340-74409902F5F0}"/>
+			<field id="{12B8C43A-975E-41D3-97EB-17A6D40DD23B}" type="double" description="GFA equation 1: prediction for C : I.S." sourceId="{E6CE0436-1CB9-4514-BD20-FCF444CB0296}"/>
+		</fields>
+		<systems>
+			<system id="{3F4DCD44-886B-442E-ACC2-8BB67DE5CC96}">
+				<datum status="1">
+					<value type="I4">1</value>
+				</datum>
+				<datum status="1">
+					<containedObject url=".\\comp1.xsd" name="comp1"/>
+				</datum>
+				<datum status="1">
+					<value type="I4">10</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.702</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">1.672</value>
+				</datum>
+				<datum status="1">
+					<value type="I4">12</value>
+				</datum>
+				<datum status="3">
+					<value type="I4">32</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">2.160692201</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.308775434</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">-0.5675214</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.139576383</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.092965704</value>
+				</datum>
+				<datum status="1">
+					<value type="I4">3</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">37.18628142</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.521485808</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.4</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.375</value>
+				</datum>
+				<datum status="1">
+					<containedObject url=".\\Molecule.sd" name="Molecule"/>
+				</datum>
+				<datum status="3">
+					<value type="I4">4</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0.0509</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">21.312</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0.547579</value>
+				</datum>
+				<datum status="3">
+					<value type="I4">26</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0.979592</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">3.228807</value>
+				</datum>
+				<datum status="3">
+					<value type="I4">6</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0.666667</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">172.926315</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">43.01955</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">14</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">0</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">1.37305557212907</value>
+				</datum>
+				<datum status="3">
+					<value type="I4">8</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">-11.422</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">-6.187</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">26.55256906</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.181818182</value>
+				</datum>
+				<datum status="3">
+					<value type="I4">0</value>
+				</datum>
+				<datum status="3">
+					<value type="I4">1</value>
+				</datum>
+				<datum status="1">
+					<value type="I4">0</value>
+				</datum>
+				<datum status="1">
+					<value type="R8">0.125</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">344.215996742249</value>
+				</datum>
+				<datum status="3">
+					<containedObject url=".\\2~2~comp1.xsd" name="comp1"/>
+				</datum>
+				<datum status="3">
+					<value type="R8">69.1421504367676</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">9.88081388672038</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">-18.1606847992589</value>
+				</datum>
+				<datum status="3">
+					<value type="R8">13.7479253541056</value>
+				</datum>
+			</system>
+			<system id="{A0A5DE0F-437C-4EA0-BCE0-EEE423C53D7A}"/>
+			<system id="{7A5D757C-4863-472D-AA0F-45FCD00D83C6}"/>
+		</systems>
+	</data>
+	<sheets activeSheet="0">
+		<cellStyles/>
+		<sheet title="Sheet 1" id="{77FFACB2-D1AD-4046-B030-364FA9B2E4B0}">
+			<rows defaultHeight="30" headerWidth="20">
+				<row sysId="{3F4DCD44-886B-442E-ACC2-8BB67DE5CC96}"/>
+				<row sysId="{A0A5DE0F-437C-4EA0-BCE0-EEE423C53D7A}"/>
+				<row sysId="{7A5D757C-4863-472D-AA0F-45FCD00D83C6}"/>
+			</rows>
+			<columns defaultWidth="85" headerHeight="45">
+				<column fieldId="{0F8801B8-55C0-4C1D-9914-12333DB9C755}"/>
+				<column fieldId="{A83831C3-5273-4DC0-8D2D-96C815F0586B}" width="110"/>
+				<column fieldId="{56ABAC15-F3DF-4C8F-B019-59D7277264ED}"/>
+				<column fieldId="{CAAA988E-6DAF-4654-AE4E-66555D77C7A9}"/>
+				<column fieldId="{67AF32E8-1E5D-401F-8CC4-AF30E2771199}"/>
+				<column fieldId="{42DB06E8-3383-4E38-A018-E0155BF1CF88}"/>
+				<column fieldId="{13ECD624-1297-486D-B57D-F91754A3F32A}"/>
+				<column fieldId="{2D65FF4D-85CB-4683-AA4D-D6BDC9CE37A8}"/>
+				<column fieldId="{36C7C8ED-B14F-480A-B21F-31BA70DEC691}"/>
+				<column fieldId="{6F6C079C-7199-4A2E-BA80-47F26D453EC9}"/>
+				<column fieldId="{46C9E688-8163-4B96-939A-6236B8E2B015}"/>
+				<column fieldId="{E72AA433-C6B0-4B50-B194-795500F88252}"/>
+				<column fieldId="{16A32F5C-F4D5-474B-8AF3-8077BFC97D5F}"/>
+				<column fieldId="{E064E3F7-AA36-464F-8FBE-C4BDF0E96B6E}"/>
+				<column fieldId="{31F82506-C940-423F-B411-6BCDDD48991F}"/>
+				<column fieldId="{983C78D9-1EA7-4ED6-9947-A00250FE0308}"/>
+				<column fieldId="{5ABCFB4E-8686-4F61-A667-794D144F3252}"/>
+				<column fieldId="{942ADE71-4C26-4EBB-A5A0-2AC6F55C6DA0}"/>
+				<column fieldId="{8EDFD124-77D3-40F8-9E39-FB2B10AA757F}"/>
+				<column fieldId="{FD85F445-6A74-45F1-A8FA-F66F99FE3B71}"/>
+				<column fieldId="{7197BB8B-F2E2-416A-A74B-662095D0D30A}"/>
+				<column fieldId="{8465287C-4D18-4467-A560-BAAF5EA38B98}"/>
+				<column fieldId="{0B29A498-42A3-4574-A395-FFAA5D678B4E}"/>
+				<column fieldId="{5A260113-8A8B-43B4-940A-03D8016DC6F5}"/>
+				<column fieldId="{0E5A754D-26B5-41F1-BA3B-06800653E87F}"/>
+				<column fieldId="{F0129AF5-5921-4179-BF11-13E9AF3C4BCF}"/>
+				<column fieldId="{BFD04059-F704-4858-9B65-B40B72A8E850}"/>
+				<column fieldId="{58E5D140-ABDA-4724-AAD0-D2F4FEF772F8}"/>
+				<column fieldId="{4A3921FD-EE63-47EE-9333-935A0B26DD17}"/>
+				<column fieldId="{EFAD44D6-FC1A-4C05-BE16-20A06923CC6F}"/>
+				<column fieldId="{EF772774-9782-41AD-8E48-E22DA97CD2BA}"/>
+				<column fieldId="{6E03E6EC-2187-417C-9BAE-BA5372183E7D}"/>
+				<column fieldId="{68E9BECE-045A-41AF-B7E0-DBEE99DF0DDB}"/>
+				<column fieldId="{44A87CBD-19EA-4108-8641-56C80B3D674C}"/>
+				<column fieldId="{EBA70AA2-DDC4-4CE4-9D8D-814759F46508}"/>
+				<column fieldId="{0D3720B3-197F-4365-94E6-5A22F7328B91}"/>
+				<column fieldId="{BB46B29A-AAE8-4377-8386-B64F4FD28E02}"/>
+				<column fieldId="{32C680D9-64B0-4B89-858C-2067179A22DE}"/>
+				<column fieldId="{B20D982D-954C-43CF-927B-686ADFEA90AB}"/>
+				<column fieldId="{651165FB-8826-4743-8B1C-DCE21AC914B4}"/>
+				<column fieldId="{59C3E5DD-C6A2-40A3-85AD-3F6668CCF36A}"/>
+				<column fieldId="{75C75554-6831-4421-A116-B81B684D469A}"/>
+				<column fieldId="{BDF4FF96-E9D5-43C7-9667-2BDC6151F194}"/>
+				<column fieldId="{044423B5-D878-40CA-B54F-1AEBF9F5AAE7}"/>
+				<column fieldId="{B45920A3-974D-431A-AFCD-D83ED2862120}"/>
+				<column fieldId="{687DC101-9486-4A82-ACE8-C94DA4607E6F}"/>
+				<column fieldId="{CCE728F8-FBE4-420B-A894-9EBF8C78F795}"/>
+				<column fieldId="{F42E5B13-430D-43F1-9395-484D5A40AAD7}"/>
+				<column fieldId="{2510D87D-BE8A-4F2B-B750-7FCDB9199E4E}"/>
+				<column fieldId="{8435F352-320B-466A-85A5-BBD33A9778DA}"/>
+				<column fieldId="{F92EBA6C-DB59-4D81-A1F0-753392A00983}"/>
+				<column fieldId="{1F31E997-CF1A-4CC8-B30E-BB7A2247D23D}"/>
+				<column fieldId="{5E2738F5-27BA-43D1-A37D-75CDA6E98C0B}"/>
+				<column fieldId="{3E9D1D1C-FEBE-48D5-A206-70C44DCEFA61}"/>
+				<column fieldId="{12B8C43A-975E-41D3-97EB-17A6D40DD23B}"/>
+			</columns>
+			<cells>
+				<styles>
+					<styleRef count="165">0</styleRef>
+				</styles>
+				<colors>
+					<block>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,</block>
+					<block>,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,</block>
+				</colors>
+			</cells>
+		</sheet>
+	</sheets>
+</studyTableDocument>
